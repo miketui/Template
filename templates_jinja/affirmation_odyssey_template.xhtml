@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Affirmation Odyssey specific styling */
+        .affirmation-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 0.5em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .affirmation-subtitle {
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 1em;
+            font-style: italic;
+        }
+        .introduction {
+            text-align: center;
+            font-size: 1em;
+            color: var(--primary-color);
+            margin: 2em auto;
+            max-width: 85%;
+            line-height: 1.6;
+        }
+        .section {
+            margin: 2.5em 0;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2em 0 1.5em 0;
+        }
+        .section-line {
+            flex-grow: 1;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 0 1em;
+        }
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-color);
+            margin: 0 0.5em;
+        }
+        .section-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.3em;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0 1em;
+        }
+        .affirmation-lines {
+            margin: 2em 0;
+        }
+        .affirmation-line {
+            display: flex;
+            align-items: center;
+            margin: 1.5em 0;
+        }
+        .line-number {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1em;
+            margin-right: 1em;
+            min-width: 1.5em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .line-container {
+            flex-grow: 1;
+            border-bottom: 1px solid var(--border-color);
+            min-height: 40px;
+            padding: 0.5em 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 85%,
+                var(--border-color) 85%,
+                var(--border-color) 87%,
+                transparent 87%
+            );
+            background-size: 100% 20px;
+        }
+        .inspiration-container {
+            margin: 1.5em 0;
+            padding: 0 1em;
+        }
+        .inspiration-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 0.8em 0;
+            line-height: 1.5;
+        }
+        .inspiration-bullet {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.8em;
+            font-size: 1.2em;
+            min-width: 1em;
+        }
+        .inspiration-text {
+            font-size: 0.95em;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+        .closing-text {
+            text-align: center;
+            font-size: 0.95em;
+            color: var(--secondary-color);
+            margin: 2em auto;
+            max-width: 80%;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .affirmation-title {
+                font-size: 1.6em;
+            }
+            .introduction, .closing-text {
+                max-width: 95%;
+            }
+            .inspiration-container {
+                padding: 0 0.5em;
+            }
+        }
+        
+        /* Print adjustments */
+        @media print {
+            .line-container {
+                background: none;
+                border-bottom: 1px solid #000;
+                min-height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title and subtitle -->
+    <h1 class="affirmation-title">AFFIRMATION ODYSSEY</h1>
+    <h2 class="affirmation-subtitle">Building Your Creative Confidence</h2>
+    <div class="decorative-line"></div>
+    
+    <!-- Introduction paragraph -->
+    <p class="introduction">
+        This is more than an activity; it's a step toward personal growth. As you dive into this eBook, you'll gradually build your own affirmation, reflecting and finding your inner voice along the way. By the end, you'll have crafted a 12-line testament to your creativity and self-awareness. Start with your first three lines now and watch your affirmation take shape.
+    </p>
+    
+    <!-- Your Affirmation section -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-line"></div>
+            <div style="color: var(--accent-color); font-size: 1.5em;">❦</div>
+            <div class="section-title">Your Affirmation</div>
+            <div style="color: var(--accent-color); font-size: 1.5em;">❦</div>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="affirmation-lines">
+            <div class="affirmation-line">
+                <div class="line-number">1.</div>
+                <div class="line-container"></div>
+            </div>
+            <div class="affirmation-line">
+                <div class="line-number">2.</div>
+                <div class="line-container"></div>
+            </div>
+            <div class="affirmation-line">
+                <div class="line-number">3.</div>
+                <div class="line-container"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Inspiration section -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-line"></div>
+            <div style="color: var(--accent-color); font-size: 1.5em;">✦</div>
+            <div class="section-title">Inspiration</div>
+            <div style="color: var(--accent-color); font-size: 1.5em;">✦</div>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="inspiration-container">
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I am capable and strong, with endless potential.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">Today, I move closer to my dreams.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">My mind is focused; my heart and spirit are ready.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">Challenges are opportunities for growth.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I deserve success, happiness, and fulfillment.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I learn, evolve, and improve daily.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">My actions spread positivity.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I am thankful for every experience.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I believe in my vision and trust my journey.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">I radiate positivity and resilience.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">Every step is toward my true potential.</div>
+            </div>
+            <div class="inspiration-item">
+                <div class="inspiration-bullet">•</div>
+                <div class="inspiration-text">Daily, I grow stronger in my purpose.</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Closing text -->
+    <p class="closing-text">
+        Repeat these affirmations daily to remind yourself of your strength and potential.
+    </p>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    AFFIRMATION ODYSSEY TEMPLATE USAGE:
+    
+    1. SINGLE PAGE LAYOUT: All content organized elegantly on one page
+    2. INTERACTIVE ELEMENTS: Three numbered lines for personal affirmations
+    3. INSPIRATION SECTION: 12 example affirmations for guidance
+    4. ELEGANT DESIGN: Decorative headers with symbols and lines
+    5. FORMAL STYLING: Professional typography with proper hierarchy
+    
+    FEATURES:
+    - Title with elegant subtitle
+    - Descriptive introduction paragraph
+    - Personal affirmation writing space (3 lines)
+    - Inspirational examples for guidance
+    - Encouraging closing message
+    - Consistent with overall book design
+    
+    CUSTOMIZATION:
+    - Adjust number of affirmation lines if needed
+    - Modify inspiration examples to match your content
+    - Change decorative symbols if desired
+    - Customize colors to match brand
+    -->
+
+</body>
+</html>
