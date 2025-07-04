@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chapter [CHAPTER_NUMBER] - [CHAPTER_TITLE] Content</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <style type="text/css">
+        /* Additional content-specific styling */
+        .chapter-content-header {
+            font-size: 0.8em;
+            color: #888;
+            text-align: center;
+            margin-bottom: 2em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .section-break {
+            margin: 2.5em 0;
+            text-align: center;
+        }
+        .section-break::before {
+            content: "• • •";
+            color: var(--accent-color);
+            font-size: 1.2em;
+            letter-spacing: 0.5em;
+        }
+        .endnotes-section {
+            margin-top: 3em;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2em;
+        }
+        .endnote-item {
+            font-size: 0.9em;
+            margin: 0.8em 0;
+            padding-left: 2em;
+            text-indent: -1.5em;
+            line-height: 1.5;
+        }
+        .page-number {
+            text-align: center;
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #666;
+        }
+        /* Prevent orphans and widows */
+        p {
+            orphans: 2;
+            widows: 2;
+        }
+        h2, h3, h4 {
+            page-break-after: avoid;
+            break-after: avoid;
+        }
+        .avoid-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page break before chapter content (continues from title page) -->
+    <div class="page-break"></div>
+    
+    <!-- Optional: Chapter content header for continuing pages -->
+    <div class="chapter-content-header">
+        Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE]
+    </div>
+
+    <!-- ========== MAIN CHAPTER CONTENT ========== -->
+    
+    <!-- First paragraph (continued from introduction or new section) -->
+    <p class="first-paragraph">
+        [CHAPTER_OPENING_PARAGRAPH_OR_CONTINUATION]
+    </p>
+    
+    <!-- Regular chapter paragraphs -->
+    <p>[PARAGRAPH_CONTENT_1]</p>
+    
+    <p>[PARAGRAPH_CONTENT_2]</p>
+    
+    <p>[PARAGRAPH_CONTENT_3]</p>
+    
+    <!-- Section break (optional - use between major sections) -->
+    <div class="section-break avoid-break"></div>
+    
+    <!-- Sub-heading for new section (optional) -->
+    <h3>[SUB_SECTION_HEADING]</h3>
+    
+    <p>[SUB_SECTION_CONTENT_1]</p>
+    
+    <p>[SUB_SECTION_CONTENT_2]</p>
+    
+    <!-- Blockquote example -->
+    <blockquote class="avoid-break">
+        <p>[QUOTE_TEXT]</p>
+        <p style="text-align: right; font-style: normal; font-weight: bold;">
+            — [QUOTE_ATTRIBUTION]
+        </p>
+    </blockquote>
+    
+    <p>[CONTENT_AFTER_QUOTE]</p>
+    
+    <!-- Another section break -->
+    <div class="section-break avoid-break"></div>
+    
+    <!-- More content sections -->
+    <h3>[ANOTHER_SUB_SECTION_HEADING]</h3>
+    
+    <p>[MORE_CONTENT_1]</p>
+    
+    <p>[MORE_CONTENT_2]</p>
+    
+    <!-- List example (if needed) -->
+    <h4>[LIST_HEADING]</h4>
+    <ul>
+        <li>[LIST_ITEM_1]</li>
+        <li>[LIST_ITEM_2]</li>
+        <li>[LIST_ITEM_3]</li>
+        <li>[LIST_ITEM_4]</li>
+    </ul>
+    
+    <p>[CONTENT_AFTER_LIST]</p>
+    
+    <!-- ========== CHAPTER CONCLUSION ========== -->
+    <div class="section-break avoid-break"></div>
+    
+    <h3>REFLECTION</h3>
+    
+    <p>[CHAPTER_CONCLUSION_PARAGRAPH_1]</p>
+    
+    <p>[CHAPTER_CONCLUSION_PARAGRAPH_2]</p>
+    
+    <!-- ========== ENDNOTES SECTION ========== -->
+    <div class="endnotes-section avoid-break">
+        <h3>ENDNOTES</h3>
+        
+        <div class="endnote-item">
+            <sup>1</sup> [ENDNOTE_1_FULL_CITATION_AND_EXPLANATION]
+        </div>
+        
+        <div class="endnote-item">
+            <sup>2</sup> [ENDNOTE_2_FULL_CITATION_AND_EXPLANATION]
+        </div>
+        
+        <div class="endnote-item">
+            <sup>3</sup> [ENDNOTE_3_FULL_CITATION_AND_EXPLANATION]
+        </div>
+        
+        <div class="endnote-item">
+            <sup>4</sup> [ENDNOTE_4_FULL_CITATION_AND_EXPLANATION]
+        </div>
+        
+        <!-- Add more endnotes as needed -->
+    </div>
+    
+    <!-- Page number (adjust as needed for each page) -->
+    <div class="page-number">
+        [PAGE_NUMBER]
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    USAGE INSTRUCTIONS:
+    
+    1. FLEXIBLE LENGTH: This template can be copied/extended for as many pages as needed
+    2. PAGE BREAKS: Add <div class="page-break"></div> between pages as needed
+    3. PROFESSIONAL FORMATTING: Maintains consistent typography and spacing
+    4. WIDOW/ORPHAN CONTROL: CSS prevents awkward line breaks
+    5. SECTION BREAKS: Use decorative breaks between major sections
+    6. ENDNOTES: Properly formatted academic-style citations
+    7. AVOID-BREAK CLASS: Use on elements that shouldn't split across pages
+    
+    FOR MULTI-PAGE CHAPTERS:
+    - Copy this template for each content page
+    - Update page numbers sequentially
+    - Ensure endnotes only appear on the final content page
+    - Use section breaks to create natural page divisions
+    -->
+
+</body>
+</html>

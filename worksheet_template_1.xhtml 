@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chapter [CHAPTER_NUMBER] Worksheet - [CHAPTER_TITLE]</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <style type="text/css">
+        /* Worksheet-specific styling */
+        .worksheet-page-header {
+            font-size: 0.8em;
+            color: #888;
+            text-align: center;
+            margin-bottom: 1.5em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .worksheet-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.6em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .worksheet-subtitle {
+            text-align: center;
+            font-size: 1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+        }
+        .worksheet-section {
+            margin: 1.5em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .section-title {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1em;
+            margin-bottom: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .fill-in-line {
+            border-bottom: 1px solid var(--border-color);
+            display: inline-block;
+            min-width: 200px;
+            margin: 0 0.3em;
+            padding-bottom: 2px;
+        }
+        .fill-in-box {
+            border: 1px solid var(--border-color);
+            min-height: 80px;
+            padding: 0.8em;
+            margin: 0.5em 0;
+            background-color: #fafafa;
+            border-radius: 4px;
+        }
+        .two-column {
+            display: table;
+            width: 100%;
+            margin: 1em 0;
+        }
+        .column {
+            display: table-cell;
+            width: 48%;
+            vertical-align: top;
+            padding-right: 1em;
+        }
+        .column:last-child {
+            padding-right: 0;
+            padding-left: 1em;
+        }
+        .checklist-item {
+            margin: 0.6em 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--accent-color);
+            margin-right: 0.8em;
+            margin-top: 0.2em;
+            flex-shrink: 0;
+        }
+        .rating-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1em 0;
+            padding: 0.5em;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+        .rating-number {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .prompt-text {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page break before worksheet -->
+    <div class="page-break"></div>
+    
+    <!-- Worksheet header -->
+    <div class="worksheet-page-header">
+        Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE] - Practical Application
+    </div>
+
+    <!-- Worksheet title -->
+    <h1 class="worksheet-title">[WORKSHEET_TITLE]</h1>
+    
+    <!-- Worksheet subtitle/instructions -->
+    <p class="worksheet-subtitle">
+        [WORKSHEET_DESCRIPTION_OR_INSTRUCTIONS]
+    </p>
+
+    <!-- Section 1: Goal Setting -->
+    <div class="worksheet-section">
+        <div class="section-title">[SECTION_1_TITLE]</div>
+        <p class="prompt-text">[SECTION_1_PROMPT_TEXT]</p>
+        
+        <p>My primary goal for this chapter is: <span class="fill-in-line"></span></p>
+        
+        <p>I will achieve this by: <span class="fill-in-line"></span></p>
+        
+        <div class="fill-in-box">
+            <p style="margin: 0; font-style: italic; color: #666;">Detailed action steps:</p>
+        </div>
+    </div>
+
+    <!-- Section 2: Two-Column Assessment -->
+    <div class="worksheet-section">
+        <div class="section-title">[SECTION_2_TITLE]</div>
+        <p class="prompt-text">[SECTION_2_PROMPT_TEXT]</p>
+        
+        <div class="two-column">
+            <div class="column">
+                <h4 style="color: var(--accent-color); margin-top: 0;">Strengths</h4>
+                <div class="fill-in-box" style="min-height: 100px;">
+                    <p style="margin: 0; font-style: italic; color: #666;">List your current strengths...</p>
+                </div>
+            </div>
+            <div class="column">
+                <h4 style="color: var(--accent-color); margin-top: 0;">Areas for Growth</h4>
+                <div class="fill-in-box" style="min-height: 100px;">
+                    <p style="margin: 0; font-style: italic; color: #666;">Identify growth opportunities...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Rating Scale -->
+    <div class="worksheet-section">
+        <div class="section-title">[SECTION_3_TITLE]</div>
+        <p class="prompt-text">[SECTION_3_PROMPT_TEXT]</p>
+        
+        <p>Rate your current confidence level (1 = Low, 5 = High):</p>
+        <div class="rating-scale">
+            <span>Low</span>
+            <div class="rating-number">1</div>
+            <div class="rating-number">2</div>
+            <div class="rating-number">3</div>
+            <div class="rating-number">4</div>
+            <div class="rating-number">5</div>
+            <span>High</span>
+        </div>
+    </div>
+
+    <!-- Section 4: Checklist/Action Items -->
+    <div class="worksheet-section">
+        <div class="section-title">[SECTION_4_TITLE]</div>
+        <p class="prompt-text">[SECTION_4_PROMPT_TEXT]</p>
+        
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>[CHECKLIST_ITEM_1]</span>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>[CHECKLIST_ITEM_2]</span>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>[CHECKLIST_ITEM_3]</span>
+        </div>
+        <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>[CHECKLIST_ITEM_4]</span>
+        </div>
+    </div>
+
+    <!-- Section 5: Reflection -->
+    <div class="worksheet-section">
+        <div class="section-title">Personal Reflection</div>
+        <p class="prompt-text">Take a moment to reflect on your key insights from this chapter:</p>
+        
+        <div class="fill-in-box" style="min-height: 60px;">
+            <p style="margin: 0; font-style: italic; color: #666;">My biggest takeaway is...</p>
+        </div>
+    </div>
+
+    <!-- Page number -->
+    <div class="page-number">
+        [PAGE_NUMBER]
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    WORKSHEET TEMPLATE 1 USAGE (Form-Based):
+    
+    1. SINGLE PAGE LAYOUT: Designed to fit all content on one page
+    2. FLEXIBLE SECTIONS: Can adjust section titles and content
+    3. FORM ELEMENTS: Fill-in lines, boxes, rating scales, checklists
+    4. TWO-COLUMN LAYOUT: For comparison exercises
+    5. PROFESSIONAL STYLING: Consistent with your design system
+    6. INTERACTIVE ELEMENTS: Checkboxes, rating circles, fill-in areas
+    
+    TO CUSTOMIZE:
+    - Replace [WORKSHEET_TITLE] with specific worksheet name
+    - Replace [SECTION_X_TITLE] with relevant section headings
+    - Replace [SECTION_X_PROMPT_TEXT] with instructions
+    - Replace [CHECKLIST_ITEM_X] with specific action items
+    - Adjust fill-in-box heights as needed for content
+    -->
+
+</body>
+</html>

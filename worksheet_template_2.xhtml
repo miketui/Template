@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chapter [CHAPTER_NUMBER] Activity - [CHAPTER_TITLE]</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <style type="text/css">
+        /* Activity worksheet specific styling */
+        .activity-page-header {
+            font-size: 0.8em;
+            color: #888;
+            text-align: center;
+            margin-bottom: 1.5em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .activity-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.6em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .activity-subtitle {
+            text-align: center;
+            font-size: 1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+        }
+        .activity-section {
+            margin: 1.5em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .activity-header {
+            background: linear-gradient(to right, var(--accent-color), rgba(23,151,166,0.7));
+            color: white;
+            padding: 0.8em 1em;
+            border-radius: 0.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 1em;
+        }
+        .exercise-box {
+            border: 2px solid var(--accent-color);
+            border-radius: 0.8em;
+            padding: 1.2em;
+            margin: 1em 0;
+            background-color: #f8fbff;
+        }
+        .step-number {
+            background: var(--accent-color);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 0.8em;
+            font-size: 0.9em;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 1em 0;
+            line-height: 1.4;
+        }
+        .creative-space {
+            border: 1px dashed var(--border-color);
+            min-height: 120px;
+            padding: 1em;
+            margin: 1em 0;
+            background-color: #fafafa;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #666;
+        }
+        .three-column {
+            display: table;
+            width: 100%;
+            margin: 1em 0;
+        }
+        .column-third {
+            display: table-cell;
+            width: 31%;
+            vertical-align: top;
+            padding: 0 1%;
+        }
+        .thinking-bubble {
+            background: #e0f7fa;
+            border: 2px solid var(--accent-color);
+            border-radius: 20px;
+            padding: 1em;
+            margin: 0.8em 0;
+            position: relative;
+            min-height: 60px;
+        }
+        .thinking-bubble:before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--accent-color);
+        }
+        .connection-line {
+            border-top: 2px dotted var(--accent-color);
+            margin: 1em 0;
+            position: relative;
+        }
+        .connection-line:after {
+            content: "↔";
+            position: absolute;
+            left: 50%;
+            top: -12px;
+            transform: translateX(-50%);
+            background: white;
+            color: var(--accent-color);
+            padding: 0 0.5em;
+            font-weight: bold;
+        }
+        .priority-box {
+            background: linear-gradient(135deg, #f8f9ff, #e8f4f8);
+            border-left: 4px solid var(--accent-color);
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 0 0.5em 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+
+```
+<!-- Page break before worksheet -->
+<div class="page-break"></div>
+
+<!-- Activity header -->
+<div class="activity-page-header">
+    Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE] - Interactive Exercise
+</div>
+
+<!-- Activity title -->
+<h1 class="activity-title">[ACTIVITY_TITLE]</h1>
+
+<!-- Activity subtitle/instructions -->
+<p class="activity-subtitle">
+    [ACTIVITY_DESCRIPTION_OR_INSTRUCTIONS]
+</p>
+
+<!-- Activity 1: Step-by-Step Exercise -->
+<div class="activity-section">
+    <div class="activity-header">[ACTIVITY_1_TITLE]</div>
+    
+    <div class="exercise-box">
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <div>[STEP_1_INSTRUCTION]</div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <div>[STEP_2_INSTRUCTION]</div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <div>[STEP_3_INSTRUCTION]</div>
+        </div>
+    </div>
+    
+    <div class="creative-space">
+        [CREATIVE_SPACE_PROMPT] - Use this space for your response
+    </div>
+</div>
+
+<!-- Activity 2: Three-Column Comparison -->
+<div class="activity-section">
+    <div class="activity-header">[ACTIVITY_2_TITLE]</div>
+    
+    <div class="three-column">
+        <div class="column-third">
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_1_TITLE]</h4>
+            <div class="thinking-bubble">
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_1_PROMPT]</p>
+            </div>
+        </div>
+        <div class="column-third">
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_2_TITLE]</h4>
+            <div class="thinking-bubble">
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_2_PROMPT]</p>
+            </div>
+        </div>
+        <div class="column-third">
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_3_TITLE]</h4>
+            <div class="thinking-bubble">
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_3_PROMPT]</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="connection-line"></div>
+    
+    <div class="priority-box">
+        <strong>Connection Insight:</strong> [CONNECTION_PROMPT_TEXT]
+    </div>
+</div>
+
+<!-- Activity 3: Creative Mapping -->
+<div class="activity-section">
+    <div class="activity-header">[ACTIVITY_3_TITLE]</div>
+    
+    <p style="font-style: italic; margin-bottom: 1em;">[ACTIVITY_3_INSTRUCTIONS]</p>
+    
+    <div style="border: 2px solid var(--accent-color); border-radius: 1em; padding: 1.5em; background: #f9f9f9; min-height: 140px; position: relative;">
+        <div style="position: absolute; top: 10px; right: 15px; color: var(--accent-color); font-weight: bold;">[ACTIVITY_3_TITLE]</div>
+        <div style="text-align: center; margin-top: 2em;">
+            <div style="border: 2px dashed #ccc; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-style: italic; color: #888; font-size: 0.9em;">
+                Center
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 1em; font-style: italic; color: #666;">
+            [MAPPING_INSTRUCTIONS]
+        </p>
+    </div>
+</div>
+
+<!-- Activity 4: Reflection & Action -->
+<div class="activity-section">
+    <div class="activity-header">Reflection & Next Steps</div>
+    
+    <div style="display: table; width: 100%;">
+        <div style="display: table-cell; width: 48%; vertical-align: top; padding-right: 2%;">
+            <h4 style="color: var(--accent-color); margin-top: 0;">Key Insights</h4>
+            <div style="border: 1px solid var(--border-color); min-height: 80px; padding: 0.8em; background: #f8f8f8; border-radius: 4px;">
+                <p style="margin: 0; font-style: italic; color: #666;">What did you discover?</p>
+            </div>
+        </div>
+        <div style="display: table-cell; width: 48%; vertical-align: top; padding-left: 2%;">
+            <h4 style="color: var(--accent-color); margin-top: 0;">Action Plan</h4>
+            <div style="border: 1px solid var(--border-color); min-height: 80px; padding: 0.8em; background: #f8f8f8; border-radius: 4px;">
+                <p style="margin: 0; font-style: italic; color: #666;">What will you do differently?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page number -->
+<div class="page-number">
+    [PAGE_NUMBER]
+</div>
+
+<!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+<!--
+WORKSHEET TEMPLATE 2 USAGE (Activity-Based):
+
+1. SINGLE PAGE LAYOUT: Multiple interactive activities on one page
+2. STEP-BY-STEP EXERCISES: Numbered instructions for activities
+3. VISUAL ELEMENTS: Thinking bubbles, connection lines, mapping areas
+4. CREATIVE SPACES: Areas for drawing, brainstorming, mapping
+5. THREE-COLUMN LAYOUTS: For comparisons and categorization
+6. REFLECTION COMPONENTS: Insight and action planning sections
+
+TO CUSTOMIZE:
+- Replace [ACTIVITY_TITLE] with specific activity name
+- Replace [ACTIVITY_X_TITLE] with section headings
+- Replace [STEP_X_INSTRUCTION] with specific steps
+- Replace [COLUMN_X_TITLE] and [COLUMN_X_PROMPT] for comparisons
+- Replace [MAPPING_INSTRUCTIONS] for creative exercises
+- Adjust creative-space height and content as needed
+-->
+```
+
+</body>
+</html>

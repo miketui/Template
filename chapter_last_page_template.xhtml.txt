@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chapter [CHAPTER_NUMBER] - Inspiration</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <style type="text/css">
+        /* Chapter last page specific styling */
+        .last-page-container {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2em 1em;
+        }
+        .image-quote-container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+        .chapter-quote-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(23,151,166,0.15);
+            margin: 0 auto;
+            display: block;
+        }
+        .chapter-completion-note {
+            font-size: 0.85em;
+            color: #888;
+            font-style: italic;
+            margin-top: 3em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .decorative-flourish {
+            color: var(--accent-color);
+            font-size: 1.5em;
+            margin: 1.5em 0;
+            letter-spacing: 0.5em;
+        }
+        
+        /* Responsive adjustments for image */
+        @media screen and (max-width: 600px) {
+            .image-quote-container {
+                max-width: 95%;
+            }
+            .last-page-container {
+                min-height: 85vh;
+                padding: 1.5em 0.5em;
+            }
+        }
+        
+        /* Print adjustments */
+        @media print {
+            .last-page-container {
+                min-height: auto;
+                page-break-before: always;
+                break-before: page;
+            }
+            .chapter-quote-image {
+                max-height: 400px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page break before last page -->
+    <div class="page-break"></div>
+    
+    <!-- Main container for centered content -->
+    <div class="last-page-container">
+        
+        <!-- Decorative flourish (optional) -->
+        <div class="decorative-flourish">❦ ❦ ❦</div>
+        
+        <!-- Image quote container -->
+        <div class="image-quote-container">
+            <!-- 
+            Replace the src attribute with your actual image file path
+            Image should be placed in an "images" folder relative to your HTML files
+            Example: ../images/chapter01_quote.jpg
+            -->
+            <img src="[IMAGE_FILE_PATH]" 
+                 alt="[IMAGE_ALT_TEXT_DESCRIPTION]" 
+                 class="chapter-quote-image" />
+        </div>
+        
+        <!-- Optional: Chapter completion note -->
+        <div class="chapter-completion-note">
+            End of Chapter [CHAPTER_NUMBER]
+        </div>
+        
+        <!-- Decorative flourish (optional) -->
+        <div class="decorative-flourish">❦ ❦ ❦</div>
+        
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    CHAPTER LAST PAGE TEMPLATE USAGE:
+    
+    1. CLEAN LAYOUT: Minimal design focused on the image quote
+    2. CENTERED POSITIONING: Image is perfectly centered on page
+    3. RESPONSIVE: Works on different screen sizes
+    4. PRINT READY: Optimized for print output
+    5. FLEXIBLE: Can accommodate different image sizes and aspect ratios
+    
+    TO CUSTOMIZE:
+    - Replace [IMAGE_FILE_PATH] with actual image path (e.g., ../images/chapter01_quote.jpg)
+    - Replace [IMAGE_ALT_TEXT_DESCRIPTION] with descriptive alt text for accessibility
+    - Replace [CHAPTER_NUMBER] with the specific chapter number
+    - Remove decorative flourishes if not desired
+    - Adjust max-width percentage if needed for image sizing
+    
+    IMAGE REQUIREMENTS:
+    - High resolution (at least 300 DPI for print)
+    - Recommended size: 800-1200 pixels wide
+    - Supported formats: JPG, PNG, SVG
+    - Keep file sizes reasonable for EPUB compatibility
+    
+    FILE ORGANIZATION:
+    - Place images in: /images/ folder
+    - Naming convention: chapter[XX]_quote.jpg (e.g., chapter01_quote.jpg)
+    - Ensure consistent aspect ratios across chapters for uniform appearance
+    -->
+
+</body>
+</html>
