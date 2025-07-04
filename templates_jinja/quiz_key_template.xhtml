@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Quiz Key specific styling */
+        .quiz-key-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .quiz-key-subtitle {
+            text-align: center;
+            font-size: 1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+        }
+        .chapter-section {
+            margin: 2em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .chapter-header {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5em;
+        }
+        .answer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5em;
+            margin: 1em 0;
+        }
+        .answer-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8em;
+            background: #f8fbff;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5em;
+            margin: 0.5em 0;
+        }
+        .question-number {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1em;
+            margin-right: 1em;
+            min-width: 3em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .correct-answer {
+            font-weight: bold;
+            color: var(--primary-color);
+            background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+            padding: 0.3em 0.6em;
+            border-radius: 0.3em;
+            margin-right: 1em;
+        }
+        .answer-explanation {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            line-height: 1.4;
+        }
+        .parts-divider {
+            margin: 3em 0;
+            text-align: center;
+        }
+        .part-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.4em;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .answer-grid {
+                grid-template-columns: 1fr;
+            }
+            .quiz-key-title {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="quiz-key-title">QUIZ KEY</h1>
+    <div class="decorative-line"></div>
+    
+    <p class="quiz-key-subtitle">
+        Answer Guide for All Chapter Quizzes
+    </p>
+
+    <!-- Part I Divider -->
+    <div class="parts-divider">
+        <div class="part-title">PART I: FOUNDATIONS OF CREATIVE HAIRSTYLING</div>
+        <div style="height: 2px; background: var(--accent-color); width: 100px; margin: 1em auto;"></div>
+    </div>
+
+    <!-- Chapter I Answers -->
+    <div class="chapter-section">
+        <div class="chapter-header">Chapter I: Unveiling Your Creative Odyssey</div>
+        <div class="answer-grid">
+            <div class="answer-item">
+                <div class="question-number">Q1:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q2:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q3:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q4:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapter II Answers -->
+    <div class="chapter-section">
+        <div class="chapter-header">Chapter II: Refining Your Creative Toolkit</div>
+        <div class="answer-grid">
+            <div class="answer-item">
+                <div class="question-number">Q1:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q2:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q3:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+            <div class="answer-item">
+                <div class="question-number">Q4:</div>
+                <div class="correct-answer">{{ answer_letter }}</div>
+                <div class="answer-explanation">{{ brief_explanation_of_correct_answer }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue pattern for all 16 chapters -->
+    
+    <!-- Part II Divider -->
+    <div class="parts-divider">
+        <div class="part-title">PART II: BUILDING YOUR PROFESSIONAL PRACTICE</div>
+        <div style="height: 2px; background: var(--accent-color); width: 100px; margin: 1em auto;"></div>
+    </div>
+
+    <!-- Chapters IV-VIII would continue here -->
+    
+    <!-- Part III Divider -->
+    <div class="parts-divider">
+        <div class="part-title">PART III: ADVANCED BUSINESS STRATEGIES</div>
+        <div style="height: 2px; background: var(--accent-color); width: 100px; margin: 1em auto;"></div>
+    </div>
+
+    <!-- Chapters IX-XIII would continue here -->
+    
+    <!-- Part IV Divider -->
+    <div class="parts-divider">
+        <div class="part-title">PART IV: FUTURE-FOCUSED GROWTH</div>
+        <div style="height: 2px; background: var(--accent-color); width: 100px; margin: 1em auto;"></div>
+    </div>
+
+    <!-- Chapters XIV-XVI would continue here -->
+
+</body>
+</html>

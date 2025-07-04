@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Journal worksheet specific styling */
+        .journal-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 0.5em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .journal-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .journal-prompt-section {
+            margin: 2em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .prompt-header {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+        }
+        .prompt-header::before,
+        .prompt-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 0 1em;
+        }
+        .prompt-text {
+            font-size: 1em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .journal-space {
+            border: 1px solid var(--border-color);
+            min-height: 120px;
+            padding: 1em;
+            margin: 1em 0;
+            background: #fafafa;
+            border-radius: 0.5em;
+            background-image: 
+                repeating-linear-gradient(
+                    transparent,
+                    transparent 24px,
+                    #e8e8e8 24px,
+                    #e8e8e8 26px
+                );
+        }
+        .journal-space-large {
+            min-height: 180px;
+        }
+        .journal-space-small {
+            min-height: 80px;
+        }
+        .reflection-box {
+            background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+            border: 2px solid var(--accent-color);
+            border-radius: 1em;
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        .reflection-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.1em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        .two-column-journal {
+            display: table;
+            width: 100%;
+            margin: 1.5em 0;
+        }
+        .journal-column {
+            display: table-cell;
+            width: 48%;
+            vertical-align: top;
+            padding: 0 1%;
+        }
+        .date-section {
+            text-align: right;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5em;
+        }
+        .gratitude-list {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0;
+        }
+        .gratitude-item {
+            margin: 1em 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .gratitude-number {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 1em;
+            min-width: 1.5em;
+        }
+        .gratitude-line {
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+            min-height: 25px;
+            padding-bottom: 5px;
+        }
+
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 600px) {
+        .journal-title {
+            font-size: 1.6em;
+        }
+        .two-column-journal {
+            display: block;
+        }
+        .journal-column {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 1em 0;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+
+
+<!-- Date Section -->
+<div class="date-section">
+    Date: _______________
+</div>
+
+<!-- Title -->
+<h1 class="journal-title">{{ journal_type }}</h1>
+<div class="decorative-line"></div>
+
+<p class="journal-subtitle">
+    {{ journal_subtitle_or_purpose }}
+</p>
+
+<!-- Journal Prompt Section 1 -->
+<div class="journal-prompt-section">
+    <div class="prompt-header">{{ prompt_section_1_title }}</div>
+    <p class="prompt-text">{{ prompt_1_question_or_instruction }}</p>
+    <div class="journal-space journal-space-large"></div>
+</div>
+
+<!-- Two-Column Section (for comparative exercises) -->
+<div class="two-column-journal">
+    <div class="journal-column">
+        <div class="prompt-header" style="font-size: 1em;">{{ left_column_title }}</div>
+        <p class="prompt-text">{{ left_column_prompt }}</p>
+        <div class="journal-space"></div>
+    </div>
+    <div class="journal-column">
+        <div class="prompt-header" style="font-size: 1em;">{{ right_column_title }}</div>
+        <p class="prompt-text">{{ right_column_prompt }}</p>
+        <div class="journal-space"></div>
+    </div>
+</div>
+
+<!-- Gratitude/List Section -->
+<div class="journal-prompt-section">
+    <div class="prompt-header">{{ list_section_title }}</div>
+    <p class="prompt-text">{{ list_prompt_instruction }}</p>
+    <ul class="gratitude-list">
+        <li class="gratitude-item">
+            <span class="gratitude-number">1.</span>
+            <div class="gratitude-line"></div>
+        </li>
+        <li class="gratitude-item">
+            <span class="gratitude-number">2.</span>
+            <div class="gratitude-line"></div>
+        </li>
+        <li class="gratitude-item">
+            <span class="gratitude-number">3.</span>
+            <div class="gratitude-line"></div>
+        </li>
+        <li class="gratitude-item">
+            <span class="gratitude-number">4.</span>
+            <div class="gratitude-line"></div>
+        </li>
+        <li class="gratitude-item">
+            <span class="gratitude-number">5.</span>
+            <div class="gratitude-line"></div>
+        </li>
+    </ul>
+</div>
+
+<!-- Reflection Box -->
+<div class="reflection-box">
+    <div class="reflection-title">{{ reflection_section_title }}</div>
+    <p class="prompt-text">{{ reflection_prompt }}</p>
+    <div class="journal-space journal-space-large"></div>
+</div>
+
+<!-- Final Prompt Section -->
+<div class="journal-prompt-section">
+    <div class="prompt-header">{{ final_section_title }}</div>
+    <p class="prompt-text">{{ final_prompt_or_commitment }}</p>
+    <div class="journal-space journal-space-small"></div>
+</div>
+
+
+</body>
+</html>

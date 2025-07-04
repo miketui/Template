@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* SMART Goals specific styling */
+        .smart-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 0.5em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .smart-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 1.5em;
+            font-style: italic;
+        }
+        .smart-acronym {
+            background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+            border: 2px solid var(--accent-color);
+            border-radius: 1em;
+            padding: 1.5em;
+            margin: 2em 0;
+            text-align: center;
+        }
+        .acronym-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.3em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        .acronym-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1em;
+            margin: 1em 0;
+        }
+        .acronym-item {
+            text-align: center;
+            padding: 0.8em;
+            background: #fff;
+            border-radius: 0.5em;
+            border: 1px solid var(--border-color);
+        }
+        .acronym-letter {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.8em;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 0.3em;
+        }
+        .acronym-word {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.3em;
+        }
+        .acronym-description {
+            font-size: 0.85em;
+            color: var(--secondary-color);
+            line-height: 1.3;
+        }
+        .goal-section {
+            margin: 2em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .goal-header {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+        }
+        .goal-header::before,
+        .goal-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 0 1em;
+        }
+        .smart-input-area {
+            border: 1px solid var(--border-color);
+            min-height: 80px;
+            padding: 1em;
+            margin: 1em 0;
+            background: #fafafa;
+            border-radius: 0.5em;
+            background-image: 
+                repeating-linear-gradient(
+                    transparent,
+                    transparent 24px,
+                    #e8e8e8 24px,
+                    #e8e8e8 26px
+                );
+        }
+        .smart-input-large {
+            min-height: 120px;
+        }
+        .date-timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            margin: 1.5em 0;
+        }
+        .date-box {
+            text-align: center;
+            padding: 1em;
+            border: 2px solid var(--accent-color);
+            border-radius: 0.8em;
+            background: #f8fbff;
+        }
+        .date-label {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            color: var(--accent-color);
+            font-size: 1em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+        .date-input {
+            border-bottom: 2px solid var(--accent-color);
+            background: transparent;
+            text-align: center;
+            padding: 0.5em;
+            min-width: 150px;
+        }
+        .action-steps {
+            margin: 2em 0;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 1em 0;
+        }
+        .step-number {
+            background: var(--accent-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1em;
+            flex-shrink: 0;
+        }
+        .step-input {
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+            min-height: 30px;
+            padding: 0.5em 0;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .smart-title {
+                font-size: 1.6em;
+            }
+            .acronym-grid {
+                grid-template-columns: 1fr;
+            }
+            .date-timeline {
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Date Section -->
+    <div style="text-align: right; font-family: 'Montserrat', Arial, sans-serif; font-size: 0.9em; color: #666; margin-bottom: 2em; border-bottom: 1px solid #ccc; padding-bottom: 0.5em;">
+        Date: _______________
+    </div>
+
+    <!-- Title -->
+    <h1 class="smart-title">SMART GOALS JOURNAL</h1>
+    <div class="decorative-line"></div>
+    
+    <p class="smart-subtitle">
+        Strategic Planning for Professional Growth
+    </p>
+
+    <!-- SMART Acronym Explanation -->
+    <div class="smart-acronym">
+        <div class="acronym-title">S.M.A.R.T. Framework</div>
+        <div class="acronym-grid">
+            <div class="acronym-item">
+                <div class="acronym-letter">S</div>
+                <div class="acronym-word">Specific</div>
+                <div class="acronym-description">Clear and well-defined</div>
+            </div>
+            <div class="acronym-item">
+                <div class="acronym-letter">M</div>
+                <div class="acronym-word">Measurable</div>
+                <div class="acronym-description">Trackable progress</div>
+            </div>
+            <div class="acronym-item">
+                <div class="acronym-letter">A</div>
+                <div class="acronym-word">Achievable</div>
+                <div class="acronym-description">Realistic and attainable</div>
+            </div>
+            <div class="acronym-item">
+                <div class="acronym-letter">R</div>
+                <div class="acronym-word">Relevant</div>
+                <div class="acronym-description">Meaningful to your vision</div>
+            </div>
+            <div class="acronym-item">
+                <div class="acronym-letter">T</div>
+                <div class="acronym-word">Time-bound</div>
+                <div class="acronym-description">Clear deadline</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specific Goal Section -->
+    <div class="goal-section">
+        <div class="goal-header">Specific Goal</div>
+        <p style="font-style: italic; color: #666; margin-bottom: 1em;">
+            What exactly do you want to achieve? Be as specific and clear as possible.
+        </p>
+        <div class="smart-input-area smart-input-large"></div>
+    </div>
+
+    <!-- Measurable Metrics -->
+    <div class="goal-section">
+        <div class="goal-header">Measurable Metrics</div>
+        <p style="font-style: italic; color: #666; margin-bottom: 1em;">
+            How will you track progress and know when you've achieved your goal?
+        </p>
+        <div class="smart-input-area"></div>
+    </div>
+
+    <!-- Achievable Assessment -->
+    <div class="goal-section">
+        <div class="goal-header">Achievable Assessment</div>
+        <p style="font-style: italic; color: #666; margin-bottom: 1em;">
+            What resources, skills, and support do you have? What might you need to develop?
+        </p>
+        <div class="smart-input-area"></div>
+    </div>
+
+    <!-- Relevant Reasoning -->
+    <div class="goal-section">
+        <div class="goal-header">Relevant Reasoning</div>
+        <p style="font-style: italic; color: #666; margin-bottom: 1em;">
+            Why is this goal important to you? How does it align with your bigger vision?
+        </p>
+        <div class="smart-input-area"></div>
+    </div>
+
+    <!-- Time-bound Timeline -->
+    <div class="goal-section">
+        <div class="goal-header">Time-bound Timeline</div>
+        <div class="date-timeline">
+            <div class="date-box">
+                <div class="date-label">Start Date</div>
+                <div class="date-input">_______________</div>
+            </div>
+            <div class="date-box">
+                <div class="date-label">Target Completion</div>
+                <div class="date-input">_______________</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Steps -->
+    <div class="goal-section">
+        <div class="goal-header">Action Steps</div>
+        <p style="font-style: italic; color: #666; margin-bottom: 1em;">
+            Break down your goal into specific, actionable steps.
+        </p>
+        <div class="action-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-input"></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-input"></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-input"></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-input"></div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-input"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Visualization -->
+    <div class="goal-section">
+        <div style="background: linear-gradient(135deg, #e0f7fa, #f0f9ff); border: 2px solid var(--accent-color); border-radius: 1em; padding: 1.5em; margin: 2em 0;">
+            <div style="font-family: 'Cinzel Decorative', 'Times New Roman', serif; font-size: 1.1em; color: var(--accent-color); text-align: center; margin-bottom: 1em; text-transform: uppercase;">
+                Success Visualization
+            </div>
+            <p style="font-style: italic; color: #666; margin-bottom: 1em; text-align: center;">
+                Describe how you'll feel and what your life will look like when you achieve this goal.
+            </p>
+            <div class="smart-input-area smart-input-large"></div>
+        </div>
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    SMART GOALS JOURNAL TEMPLATE USAGE:
+    
+    1. COMPLETE SMART FRAMEWORK: All 5 elements clearly defined
+    2. VISUAL ACRONYM: Easy reference for the methodology
+    3. STRUCTURED SECTIONS: Logical flow through goal planning
+    4. ACTION PLANNING: Specific steps for implementation
+    5. SUCCESS VISUALIZATION: Motivational completion exercise
+    
+    FEATURES:
+    - Interactive SMART acronym guide
+    - Structured input areas for each element
+    - Timeline planning with start/end dates
+    - Numbered action steps
+    - Success visualization section
+    - Professional coaching-style layout
+    - Single page design
+    
+    CUSTOMIZATION:
+    - Can be used for any type of goal (professional, personal, creative)
+    - Adaptable for different time frames
+    - Works for both individual and team goals
+    - Suitable for regular goal review sessions
+    -->
+
+</body>
+</html>

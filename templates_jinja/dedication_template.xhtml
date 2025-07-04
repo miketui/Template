@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Dedication page specific styling */
+        .dedication-container {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3em 2em;
+        }
+        .dedication-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.8em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 2.5em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        .dedication-content {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        .dedication-dropcap {
+            float: none;
+            display: inline;
+            font-size: 4.5em;
+            line-height: 0.8;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+            padding: 0.15em 0.25em 0.08em 0.22em;
+            border-radius: 0.3em;
+            box-shadow: 0 2px 8px rgba(23,151,166,0.15);
+            margin-right: 0.1em;
+            position: relative;
+            top: 0.1em;
+        }
+        .dedication-text {
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+            color: var(--primary-color);
+            font-style: italic;
+            margin: 2em 0;
+        }
+        .dedication-signature {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-top: 3em;
+            font-style: normal;
+        }
+        .decorative-flourish {
+            color: var(--accent-color);
+            font-size: 1.8em;
+            margin: 2em 0;
+            letter-spacing: 0.5em;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .dedication-dropcap {
+                font-size: 3.5em;
+            }
+            .dedication-title {
+                font-size: 1.4em;
+            }
+            .dedication-content {
+                font-size: 1em;
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dedication-container">
+        
+        <!-- Decorative flourish -->
+        <div class="decorative-flourish">❦ ❦ ❦</div>
+        
+        <!-- Dedication title -->
+        <h1 class="dedication-title">DEDICATION</h1>
+        
+        <!-- Dedication content with huge dropcap -->
+        <div class="dedication-content">
+            <div class="dedication-text">
+                <span class="dedication-dropcap">D</span>edicated to every stylist who dares to dream beyond the conventional, who sees beauty as a sacred art, and who believes in the transformative power of conscious creativity. This book is for those who understand that hairstyling is not just a profession, but a calling to elevate and inspire.
+            </div>
+            
+            <!-- Additional dedication paragraphs if needed -->
+            <div class="dedication-text">
+                {{ additional_dedication_paragraph_if_needed }}
+            </div>
+            
+            <!-- Optional signature/attribution -->
+            <div class="dedication-signature">
+                {{ author_signature_or_attribution }}
+            </div>
+        </div>
+        
+        <!-- Decorative flourish -->
+        <div class="decorative-flourish">❦ ❦ ❦</div>
+        
+    </div>
+
+</body>
+</html>

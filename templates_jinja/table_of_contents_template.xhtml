@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Table of Contents specific styling */
+        .contents-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .toc-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1em 0;
+            column-count: 2;
+            column-gap: 3em;
+            column-fill: balance;
+        }
+        .toc-section {
+            margin: 1.5em 0;
+        }
+        .part-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1.5em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+        }
+        .toc-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 0.8em 0;
+            padding: 0.3em 0;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .entry-title {
+            flex-grow: 1;
+            font-size: 0.95em;
+            color: var(--primary-color);
+        }
+        .chapter-entry .entry-title {
+            margin-left: 1.5em;
+            font-style: italic;
+        }
+        .entry-page {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            margin-left: 1em;
+        }
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2.5em 0;
+        }
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 0 1em;
+        }
+        .divider-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--accent-color);
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .contents-title {
+                font-size: 1.6em;
+            }
+            .toc-entry {
+                font-size: 0.9em;
+            }
+            .chapter-entry .entry-title {
+                margin-left: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="contents-title">CONTENTS</h1>
+    <div class="decorative-line"></div>
+    
+    <!-- Table of Contents -->
+    <div class="toc-container">
+        
+        <!-- Front Matter -->
+        <div class="toc-section">
+            <div class="toc-entry">
+                <div class="entry-title">Title Page</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Copyright</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Table of Contents</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Dedication</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Self Assessment 1</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Affirmation Odyssey</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Preface</div>
+            </div>
+        </div>
+        
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">❦</div>
+            <div class="divider-line"></div>
+        </div>
+        
+        <!-- Part I -->
+        <div class="toc-section">
+            <h2 class="part-title">PART I: FOUNDATIONS OF CREATIVE HAIRSTYLING</h2>
+            <div class="toc-entry">
+                <div class="entry-title">Part I: Foundations of Creative Hairstyling</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter I: Unveiling Your Creative Odyssey</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter II: Refining Your Creative Toolkit</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter III: Reigniting Your Creative Fire</div>
+            </div>
+        </div>
+        
+        <!-- Part II -->
+        <div class="toc-section">
+            <h2 class="part-title">PART II: BUILDING YOUR PROFESSIONAL PRACTICE</h2>
+            <div class="toc-entry">
+                <div class="entry-title">Part II: Building Your Professional Practice</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter IV: The Art of Networking in Freelance Hairstyling</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter V: Cultivating Creative Excellence Through Mentorship</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter VI: Mastering the Business of Hairstyling</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter VII: Embracing Wellness and Self-Care</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter VIII: Advancing Skills Through Continuous Education</div>
+            </div>
+        </div>
+        
+        <!-- Part III -->
+        <div class="toc-section">
+            <h2 class="part-title">PART III: ADVANCED BUSINESS STRATEGIES</h2>
+            <div class="toc-entry">
+                <div class="entry-title">Part III: Advanced Business Strategies</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter IX: Stepping Into Leadership</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter X: Crafting Enduring Legacies</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XI: Advanced Digital Strategies for Freelance Hairstylists</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XII: Financial Wisdom Building Sustainable Ventures</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XIII: Embracing Ethics and Sustainability in Hairstyling</div>
+            </div>
+        </div>
+        
+        <!-- Part IV -->
+        <div class="toc-section">
+            <h2 class="part-title">PART IV: FUTURE-FOCUSED GROWTH</h2>
+            <div class="toc-entry">
+                <div class="entry-title">Part IV: Future-Focused Growth</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XIV: The Impact of AI on the Beauty Industry</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XV: Cultivating Resilience and Well-Being in Hairstyling</div>
+            </div>
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">Chapter XVI: Tresses and Textures: Embracing Diversity in Hairstyling</div>
+            </div>
+        </div>
+        
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">❦</div>
+            <div class="divider-line"></div>
+        </div>
+        
+        <!-- Back Matter -->
+        <div class="toc-section">
+            <div class="toc-entry">
+                <div class="entry-title">Conclusion</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Quiz Key</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Self-Assessment</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Affirmations Close</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Continued Learning Commitment</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Acknowledgments</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">About the Author</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Curls Contemp Collective</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Journaling Start</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Manifesting Journal</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Journal Page</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Professional Development</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">SMART Goals</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Self-Care Journal</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Vision Journal</div>
+            </div>
+            <div class="toc-entry">
+                <div class="entry-title">Doodle Page</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    TABLE OF CONTENTS TEMPLATE USAGE:
+    
+    1. SINGLE PAGE LAYOUT: All content organized on one page
+    2. HIERARCHICAL STRUCTURE: Clear distinction between parts and chapters
+    3. ELEGANT DIVIDERS: Decorative separators between sections
+    4. RESPONSIVE DESIGN: Adapts to different screen sizes
+    5. CHAPTER INDENTATION: Chapters are indented under their parts
+    
+    CUSTOMIZATION OPTIONS:
+    - Add page numbers in .entry-page spans if needed for print version
+    - Adjust chapter titles to match your actual chapter names
+    - Modify part titles if structure changes
+    - Add or remove back matter entries as needed
+    
+    STRUCTURE:
+    - Front matter (no page numbers typically)
+    - Four main parts with chapters
+    - Back matter and journal sections
+    -->
+
+</body>
+</html>

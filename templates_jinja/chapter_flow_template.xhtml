@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+</head>
+<body>
+
+    <!-- ========== PAGE 1: CHAPTER TITLE PAGE ========== -->
+    <!-- See chapter title page template for complete formatting -->
+    <div class="page-break"></div>
+    
+    <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
+        {{ reference:_see_chapter_title_page_template }}
+    </p>
+    
+    <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
+        <p><strong>Chapter Title Page Contains:</strong></p>
+        <ul>
+            <li>Book title at top</li>
+            <li>Decorative accent line</li>
+            <li>Chapter number (Roman numeral)</li>
+            <li>Chapter title (stacked words)</li>
+            <li>Bible quote in centered box</li>
+            <li>Introduction heading + dropcap + introduction content</li>
+        </ul>
+    </div>
+
+    <!-- ========== PAGE 2+: FULL CHAPTER CONTENT ========== -->
+    <div class="page-break"></div>
+    
+    <h2>FULL CHAPTER CONTENT</h2>
+    
+    <p class="first-paragraph">
+        <span class="dropcap">{{ first_letter }}</span>{{ continued_chapter_content }}
+    </p>
+    
+    <p>{{ main_chapter_content_paragraphs }}</p>
+    
+    <p>{{ additional_content_sections }}</p>
+    
+    <p>{{ more_chapter_content }}</p>
+    
+    <!-- Chapter content continues as needed -->
+    
+    <!-- ========== ENDNOTES SECTION ========== -->
+    <h3>ENDNOTES</h3>
+    
+    <p style="font-size: 0.9em; margin-left: 1em;">
+        1. {{ endnote_reference_1 }}
+    </p>
+    <p style="font-size: 0.9em; margin-left: 1em;">
+        2. {{ endnote_reference_2 }}
+    </p>
+    <p style="font-size: 0.9em; margin-left: 1em;">
+        3. {{ endnote_reference_3 }}
+    </p>
+
+    <!-- ========== PAGE 3: CHAPTER QUIZ PAGE ========== -->
+    <div class="page-break"></div>
+    
+    <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
+        {{ reference:_see_quiz_template_for_quiz_page }}
+    </p>
+    
+    <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
+        <p><strong>Chapter Quiz Page Contains:</strong></p>
+        <ul>
+            <li>Quiz title/heading</li>
+            <li>4 multiple choice questions</li>
+            <li>Single page layout (no overflow)</li>
+            <li>Answer choices (A, B, C, D)</li>
+            <li>Instructions for quiz completion</li>
+        </ul>
+    </div>
+
+    <!-- ========== PAGE 4: CHAPTER WORKSHEET PAGE ========== -->
+    <div class="page-break"></div>
+    
+    <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
+        {{ reference:_see_worksheet_template_for_worksheet_page }}
+    </p>
+    
+    <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
+        <p><strong>Chapter Worksheet Page Contains:</strong></p>
+        <ul>
+            <li>Worksheet title/heading</li>
+            <li>Interactive exercises/activities</li>
+            <li>Single page layout (no run over)</li>
+            <li>Fill-in sections, tables, or guided prompts</li>
+            <li>Space for user responses</li>
+        </ul>
+    </div>
+
+    <!-- ========== PAGE 5: CHAPTER LAST PAGE (EMBEDDED IMAGE QUOTE) ========== -->
+    <div class="page-break"></div>
+    
+    <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
+        {{ reference:_see_chapter_last_page_template_for_last_page }}
+    </p>
+    
+    <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
+        <p><strong>Chapter Last Page Contains:</strong></p>
+        <ul>
+            <li>Blank page layout</li>
+            <li>Centered embedded image quote</li>
+            <li>Minimal text/clean design</li>
+            <li>Inspirational or reflective quote image</li>
+        </ul>
+    </div>
+
+    <!-- ========== FLOW SUMMARY ========== -->
+    <div class="page-break"></div>
+    
+    <h2 class="centered">CHAPTER FLOW SUMMARY</h2>
+    
+    <div style="background: #f0f0f0; padding: 1.5em; border-radius: 8px; margin: 2em 0;">
+        <p><strong>Each Chapter Contains (in order):</strong></p>
+        <ol style="line-height: 2;">
+            <li><strong>Chapter Title Page</strong> - Introduction + Bible quote</li>
+            <li><strong>Chapter Content Pages</strong> - Main content + endnotes</li>
+            <li><strong>Chapter Quiz Page</strong> - 4 multiple choice questions</li>
+            <li><strong>Chapter Worksheet Page</strong> - Interactive exercises</li>
+            <li><strong>Chapter Last Page</strong> - Embedded image quote</li>
+        </ol>
+        
+        <p style="margin-top: 1.5em;"><strong>Total: 16 chapters × 5 page types = 80+ structured pages</strong></p>
+    </div>
+
+</body>
+</html>
