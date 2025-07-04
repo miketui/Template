@@ -1,10 +1,12 @@
-import os, openai, time, sys, re
+import os
+import openai
+import time
+import sys
 
 IN_DIR = os.getenv("TEMPLATE_INPUT_DIR", "./templates_static")
 OUT_DIR = os.getenv("TEMPLATE_OUTPUT_DIR", "./templates_jinja")
 openai.api_key = os.getenv("OPENAI_API_KEY") or sys.exit("OPENAI_API_KEY not set.")
 
-# Heuristic file type detector for better prompt customization
 def classify_template(fname):
     fname_lower = fname.lower()
     if "quiz" in fname_lower or "quiz-key" in fname_lower:
@@ -27,44 +29,42 @@ def get_prompt_for_type(typ):
     base = """
 Role: Expert Jinja2 Template Engineer and Content Modeler.
 
-Objective: Convert the given static XHTML/HTML file into a flexible, reusable Jinja2 template, retaining layout, accessibility, and all CSS, but replacing all hardcoded content with semantic, clearly-named placeholders and Jinja2 blocks. Never remove or break structure/styles. Always comment on where dynamic content should go. Return only the new template code.
+Objective: Convert the given static XHTML/HTML file into a flexible, reusable Jinja2 template, retaining all structure, CSS, and accessibility, but replacing all hardcoded content with clear, semantic placeholders and Jinja2 blocks. Comment clearly where dynamic content goes. Ensure the output will NOT produce linting errors and is ready for automated AI-driven content filling.
 """
     details = {
         "quiz_key": """
-- This file is a quiz answer key.
-- There are 16 chapters, each with 4 questions, totaling 64 answers.
-- Create a repeatable structure (Jinja2 for loop) for answers: {% for answer in answers %}...{% endfor %}.
-- Use placeholders like {{ answer.chapter }}, {{ answer.number }}, {{ answer.text }}.
+- This file is a quiz answer key (16 chapters × 4 answers = 64).
+- Use a repeatable structure: {% for answer in answers %}…{% endfor %}.
+- Placeholders: {{ answer.chapter }}, {{ answer.number }}, {{ answer.text }}.
 """,
         "worksheet": """
 - This file is an interactive worksheet.
 - Use placeholders for user entries and worksheet sections.
-- Use blocks for sections: {% block section_1 %}{% endblock %}, etc.
+- Use blocks for major sections.
 """,
         "chapter": """
-- This file is a chapter content template.
-- Use placeholders for chapter metadata (title, number, Bible quote, etc.).
-- Use blocks for intro, main, worksheet, quiz, and quote.
+- This file is a chapter template.
+- Placeholders: chapter title, number, bible quote, intro, main content, worksheet, quiz, quote image.
+- Use Jinja2 blocks for intro, main, worksheet, quiz, and quote.
 """,
         "title": """
 - This file is a title page.
-- Use placeholders for title, subtitle, author, publisher, and cover image.
+- Placeholders for title, subtitle, author, publisher, cover image.
 """,
         "toc": """
-- This file is a table of contents.
-- Use a Jinja2 for loop for chapters: {% for chapter in chapters %}...{% endfor %}.
+- Table of contents file.
+- Use a for-loop: {% for chapter in chapters %}…{% endfor %}.
 """,
         "copyright": """
-- This file is a copyright page.
-- Use placeholders for copyright year, author, publisher, ISBN.
+- Copyright page.
+- Placeholders for year, author, publisher, ISBN.
 """,
         "about_author": """
-- This file is an about the author page.
-- Use placeholders for author name, bio, photo.
+- About the author page.
+- Placeholders for author name, bio, photo.
 """,
         "general": """
-- Generic content template.
-- Replace all text, headings, and fixed elements with placeholders.
+- Generic template: replace all text, headings, and fixed elements with placeholders.
 """
     }
     return base + details.get(typ, details["general"])
@@ -74,7 +74,9 @@ def convert_with_openai(static_html, filetype):
     for retry in range(3):
         try:
             resp = openai.ChatCompletion.create(
-                model="gpt-4o", temperature=0.2, max_tokens=3072,
+                model="gpt-4o",
+                temperature=0.15,
+                max_tokens=3072,
                 messages=[{"role": "user", "content": prompt}]
             )
             return resp['choices'][0]['message']['content'].strip()
@@ -89,13 +91,18 @@ def main():
             continue
         filetype = classify_template(fname)
         input_path = os.path.join(IN_DIR, fname)
-        output_path = os.path.join(OUT_DIR, fname)  # Keeps the same filename, no extra subdirectory
-        print(f"Converting {fname} as type [{filetype}] ...")
+        output_path = os.path.join(OUT_DIR, fname)
+        print(f"Converting {fname} as type [{filetype}] …")
         with open(input_path, "r", encoding="utf-8") as f:
             static_html = f.read()
         jinja_template = convert_with_openai(static_html, filetype)
-        with open(output_path, "w", encoding="utf-8") as out:
-            out.write(jinja_template)
+        # Lint the result with HTMLHint before saving
+        with open("._tmp_jinja.xhtml", "w", encoding="utf-8") as tmp:
+            tmp.write(jinja_template)
+        lint_result = os.system(f"htmlhint ._tmp_jinja.xhtml")
+        if lint_result != 0:
+            print(f"⚠️  HTMLHint found issues in {fname}. Please review the output before using.")
+        os.rename("._tmp_jinja.xhtml", output_path)
         print(f"✓ Saved to {output_path}\n")
 
 if __name__ == "__main__":
