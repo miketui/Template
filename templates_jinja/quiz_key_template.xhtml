@@ -100,6 +100,36 @@
 <body>
 
     <!-- Title -->
+ codex/convert-templates-to-jinja2-with-placeholders
+    <h1 class="quiz-key-title">{{ quiz_key_heading }}</h1>
+    <div class="decorative-line"></div>
+    
+    <p class="quiz-key-subtitle">
+        {{ quiz_key_subtitle }}
+    </p>
+
+    {% for part in parts %}
+    <div class="parts-divider">
+        <div class="part-title">{{ part.title }}</div>
+        <div style="height: 2px; background: var(--accent-color); width: 100px; margin: 1em auto;"></div>
+    </div>
+
+        {% for chapter in part.chapters %}
+        <div class="chapter-section">
+            <div class="chapter-header">{{ chapter.title }}</div>
+            <div class="answer-grid">
+                {% for qa in chapter.answers %}
+                <div class="answer-item">
+                    <div class="question-number">Q{{ qa.number }}:</div>
+                    <div class="correct-answer">{{ qa.letter }}</div>
+                    <div class="answer-explanation">{{ qa.explanation }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+
     <h1 class="quiz-key-title">QUIZ KEY</h1>
     <div class="decorative-line"></div>
     
@@ -192,6 +222,7 @@
     </div>
 
     <!-- Chapters XIV-XVI would continue here -->
+ main
 
 </body>
 </html>

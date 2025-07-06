@@ -94,11 +94,26 @@
 <body>
 
     <!-- Title -->
+ codex/convert-templates-to-jinja2-with-placeholders
+    <h1 class="contents-title">{{ contents_heading }}</h1>
+
     <h1 class="contents-title">CONTENTS</h1>
+ main
     <div class="decorative-line"></div>
     
     <!-- Table of Contents -->
     <div class="toc-container">
+codex/convert-templates-to-jinja2-with-placeholders
+
+        <!-- Front Matter -->
+        <div class="toc-section">
+            {% for item in front_matter %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ item }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
         
         <!-- Front Matter -->
         <div class="toc-section">
@@ -126,11 +141,30 @@
         </div>
         
         <!-- Section Divider -->
+ main
         <div class="section-divider">
             <div class="divider-line"></div>
             <div class="divider-icon">❦</div>
             <div class="divider-line"></div>
         </div>
+codex/convert-templates-to-jinja2-with-placeholders
+
+        {% for part in parts %}
+        <div class="toc-section">
+            <h2 class="part-title">{{ part.title }}</h2>
+            {% if part.title_entry %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ part.title_entry }}</div>
+            </div>
+            {% endif %}
+            {% for chapter in part.chapters %}
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">{{ chapter }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
         
         <!-- Part I -->
         <div class="toc-section">
@@ -213,11 +247,22 @@
         </div>
         
         <!-- Section Divider -->
+main
         <div class="section-divider">
             <div class="divider-line"></div>
             <div class="divider-icon">❦</div>
             <div class="divider-line"></div>
         </div>
+codex/convert-templates-to-jinja2-with-placeholders
+
+        <!-- Back Matter -->
+        <div class="toc-section">
+            {% for item in back_matter %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ item }}</div>
+            </div>
+            {% endfor %}
+
         
         <!-- Back Matter -->
         <div class="toc-section">
@@ -269,6 +314,7 @@
             <div class="toc-entry">
                 <div class="entry-title">Doodle Page</div>
             </div>
+ main
         </div>
         
     </div>
