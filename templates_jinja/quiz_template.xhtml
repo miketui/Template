@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [CHAPTER_NUMBER] Quiz - [CHAPTER_TITLE]</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -90,51 +90,50 @@
 </head>
 <body>
 
-```
+
 <!-- Page break before quiz -->
 <div class="page-break"></div>
 
 <!-- Quiz header -->
 <div class="quiz-page-header">
-    Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE] - Knowledge Check
+    {{ quiz_header }}
 </div>
 
 <!-- Quiz title -->
-<h1 class="quiz-title">Chapter Quiz</h1>
+<h1 class="quiz-title">{{ quiz_title }}</h1>
 
 <!-- Quiz subtitle/instructions -->
 <p class="quiz-subtitle">
-    Test your understanding of the key concepts from this chapter
+    {{ quiz_subtitle }}
 </p>
 
 <!-- Quiz instructions -->
 <div class="quiz-instructions">
-    <strong>Instructions:</strong> Choose the best answer for each question. 
-    Circle or highlight your selected answer.
+    {{ quiz_instructions }}
 </div>
 
 <!-- Question 1 -->
 <div class="quiz-question">
     <span class="question-number">Question 1:</span>
     <div class="question-text">
-        [QUESTION_1_TEXT]
+        {{ question_1_text }}
     </div>
     <ul class="quiz-options">
         <li class="quiz-option">
             <span class="option-letter">A.</span>
-            <span class="option-text">[OPTION_1A_TEXT]</span>
+            <span class="option-text">{{ option_1a_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">B.</span>
-            <span class="option-text">[OPTION_1B_TEXT]</span>
+            <span class="option-text">{{ option_1b_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">C.</span>
-            <span class="option-text">[OPTION_1C_TEXT]</span>
+            <span class="option-text">{{ option_1c_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">D.</span>
-            <span class="option-text">[OPTION_1D_TEXT]</span>
+            <span class="option-text">{{ option_1d_text }}</span>
         </li>
     </ul>
 </div>
@@ -145,24 +144,24 @@
 <div class="quiz-question">
     <span class="question-number">Question 2:</span>
     <div class="question-text">
-        [QUESTION_2_TEXT]
+        {{ question_2_text }}
     </div>
     <ul class="quiz-options">
         <li class="quiz-option">
             <span class="option-letter">A.</span>
-            <span class="option-text">[OPTION_2A_TEXT]</span>
+            <span class="option-text">{{ option_2a_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">B.</span>
-            <span class="option-text">[OPTION_2B_TEXT]</span>
+            <span class="option-text">{{ option_2b_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">C.</span>
-            <span class="option-text">[OPTION_2C_TEXT]</span>
+            <span class="option-text">{{ option_2c_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">D.</span>
-            <span class="option-text">[OPTION_2D_TEXT]</span>
+            <span class="option-text">{{ option_2d_text }}</span>
         </li>
     </ul>
 </div>
@@ -173,24 +172,24 @@
 <div class="quiz-question">
     <span class="question-number">Question 3:</span>
     <div class="question-text">
-        [QUESTION_3_TEXT]
+        {{ question_3_text }}
     </div>
     <ul class="quiz-options">
         <li class="quiz-option">
             <span class="option-letter">A.</span>
-            <span class="option-text">[OPTION_3A_TEXT]</span>
+            <span class="option-text">{{ option_3a_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">B.</span>
-            <span class="option-text">[OPTION_3B_TEXT]</span>
+            <span class="option-text">{{ option_3b_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">C.</span>
-            <span class="option-text">[OPTION_3C_TEXT]</span>
+            <span class="option-text">{{ option_3c_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">D.</span>
-            <span class="option-text">[OPTION_3D_TEXT]</span>
+            <span class="option-text">{{ option_3d_text }}</span>
         </li>
     </ul>
 </div>
@@ -201,31 +200,31 @@
 <div class="quiz-question">
     <span class="question-number">Question 4:</span>
     <div class="question-text">
-        [QUESTION_4_TEXT]
+        {{ question_4_text }}
     </div>
     <ul class="quiz-options">
         <li class="quiz-option">
             <span class="option-letter">A.</span>
-            <span class="option-text">[OPTION_4A_TEXT]</span>
+            <span class="option-text">{{ option_4a_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">B.</span>
-            <span class="option-text">[OPTION_4B_TEXT]</span>
+            <span class="option-text">{{ option_4b_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">C.</span>
-            <span class="option-text">[OPTION_4C_TEXT]</span>
+            <span class="option-text">{{ option_4c_text }}</span>
         </li>
         <li class="quiz-option">
             <span class="option-letter">D.</span>
-            <span class="option-text">[OPTION_4D_TEXT]</span>
+            <span class="option-text">{{ option_4d_text }}</span>
         </li>
     </ul>
 </div>
 
 <!-- Page number -->
 <div class="page-number">
-    [PAGE_NUMBER]
+    {{ page_number }}
 </div>
 
 <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
@@ -240,12 +239,12 @@ QUIZ TEMPLATE USAGE:
 6. ACCESSIBLE: Clear question numbering and option formatting
 
 TO CUSTOMIZE:
-- Replace [CHAPTER_NUMBER] and [CHAPTER_TITLE] in multiple places
-- Replace [QUESTION_X_TEXT] with actual questions
-- Replace [OPTION_XY_TEXT] with answer choices
-- Update [PAGE_NUMBER] for sequential page numbering
+- Replace {{ chapter_number }} and {{ chapter_title }} in multiple places
+- Replace {{ question_x_text }} with actual questions
+- Replace {{ option_xy_text }} with answer choices
+- Update {{ page_number }} for sequential page numbering
 -->
-```
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [X] Complete Flow Structure</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
 </head>
@@ -13,7 +13,7 @@
     <div class="page-break"></div>
     
     <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
-        [REFERENCE: See Chapter Title Page Template]
+        {{ reference:_see_chapter_title_page_template }}
     </p>
     
     <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
@@ -34,14 +34,14 @@
     <h2>FULL CHAPTER CONTENT</h2>
     
     <p class="first-paragraph">
-        <span class="dropcap">[FIRST_LETTER]</span>[CONTINUED_CHAPTER_CONTENT]
+        <span class="dropcap">{{ first_letter }}</span>{{ continued_chapter_content }}
     </p>
     
-    <p>[MAIN_CHAPTER_CONTENT_PARAGRAPHS]</p>
+    <p>{{ main_chapter_content_paragraphs }}</p>
     
-    <p>[ADDITIONAL_CONTENT_SECTIONS]</p>
+    <p>{{ additional_content_sections }}</p>
     
-    <p>[MORE_CHAPTER_CONTENT]</p>
+    <p>{{ more_chapter_content }}</p>
     
     <!-- Chapter content continues as needed -->
     
@@ -49,20 +49,20 @@
     <h3>ENDNOTES</h3>
     
     <p style="font-size: 0.9em; margin-left: 1em;">
-        1. [ENDNOTE_REFERENCE_1]
+        1. {{ endnote_reference_1 }}
     </p>
     <p style="font-size: 0.9em; margin-left: 1em;">
-        2. [ENDNOTE_REFERENCE_2]
+        2. {{ endnote_reference_2 }}
     </p>
     <p style="font-size: 0.9em; margin-left: 1em;">
-        3. [ENDNOTE_REFERENCE_3]
+        3. {{ endnote_reference_3 }}
     </p>
 
     <!-- ========== PAGE 3: CHAPTER QUIZ PAGE ========== -->
     <div class="page-break"></div>
     
     <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
-        [REFERENCE: See Quiz Template for Quiz Page]
+        {{ reference:_see_quiz_template_for_quiz_page }}
     </p>
     
     <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
@@ -80,7 +80,7 @@
     <div class="page-break"></div>
     
     <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
-        [REFERENCE: See Worksheet Template for Worksheet Page]
+        {{ reference:_see_worksheet_template_for_worksheet_page }}
     </p>
     
     <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">
@@ -98,7 +98,7 @@
     <div class="page-break"></div>
     
     <p class="centered" style="font-weight: bold; color: #1797a6; margin-bottom: 2em;">
-        [REFERENCE: See Chapter Last Page Template for Last Page]
+        {{ reference:_see_chapter_last_page_template_for_last_page }}
     </p>
     
     <div style="border: 2px dashed #1797a6; padding: 1em; margin: 2em 0;">

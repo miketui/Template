@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>SMART Goals Journal - Curls&amp;Contemplation</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -187,11 +187,11 @@
     </div>
 
     <!-- Title -->
-    <h1 class="smart-title">SMART GOALS JOURNAL</h1>
+    <h1 class="smart-title">{{ smart_goals_heading }}</h1>
     <div class="decorative-line"></div>
     
     <p class="smart-subtitle">
-        Strategic Planning for Professional Growth
+        {{ smart_goals_subtitle }}
     </p>
 
     <!-- SMART Acronym Explanation -->
@@ -230,7 +230,7 @@
     <div class="goal-section">
         <div class="goal-header">Specific Goal</div>
         <p style="font-style: italic; color: #666; margin-bottom: 1em;">
-            What exactly do you want to achieve? Be as specific and clear as possible.
+            {{ specific_goal_prompt }}
         </p>
         <div class="smart-input-area smart-input-large"></div>
     </div>
@@ -239,7 +239,7 @@
     <div class="goal-section">
         <div class="goal-header">Measurable Metrics</div>
         <p style="font-style: italic; color: #666; margin-bottom: 1em;">
-            How will you track progress and know when you've achieved your goal?
+            {{ measurable_prompt }}
         </p>
         <div class="smart-input-area"></div>
     </div>
@@ -248,7 +248,7 @@
     <div class="goal-section">
         <div class="goal-header">Achievable Assessment</div>
         <p style="font-style: italic; color: #666; margin-bottom: 1em;">
-            What resources, skills, and support do you have? What might you need to develop?
+            {{ achievable_prompt }}
         </p>
         <div class="smart-input-area"></div>
     </div>
@@ -257,7 +257,7 @@
     <div class="goal-section">
         <div class="goal-header">Relevant Reasoning</div>
         <p style="font-style: italic; color: #666; margin-bottom: 1em;">
-            Why is this goal important to you? How does it align with your bigger vision?
+            {{ relevant_prompt }}
         </p>
         <div class="smart-input-area"></div>
     </div>
@@ -281,7 +281,7 @@
     <div class="goal-section">
         <div class="goal-header">Action Steps</div>
         <p style="font-style: italic; color: #666; margin-bottom: 1em;">
-            Break down your goal into specific, actionable steps.
+            {{ action_steps_prompt }}
         </p>
         <div class="action-steps">
             <div class="step-item">
@@ -314,7 +314,7 @@
                 Success Visualization
             </div>
             <p style="font-style: italic; color: #666; margin-bottom: 1em; text-align: center;">
-                Describe how you'll feel and what your life will look like when you achieve this goal.
+                {{ success_visualization_prompt }}
             </p>
             <div class="smart-input-area smart-input-large"></div>
         </div>

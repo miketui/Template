@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* About the Author specific styling */
+        .author-page-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .author-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+        .author-photo-section {
+            text-align: center;
+            margin: 2em 0;
+        }
+        .author-photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            margin: 0 auto 1em auto;
+            background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+        .author-name {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.8em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1em 0;
+        }
+        .author-tagline {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .author-bio {
+            margin: 2em 0;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        .author-bio-dropcap {
+            float: left;
+            font-size: 3em;
+            line-height: 0.95;
+            margin: 0.10em 0.18em 0 0;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            background: #e0f7fa;
+            padding: 0.13em 0.21em 0.05em 0.17em;
+            border-radius: 0.4em;
+            box-shadow: 0 1px 5px rgba(23,151,166,0.10);
+        }
+        .credentials-section {
+            background: #f8fbff;
+            border: 1px solid var(--border-color);
+            border-radius: 0.8em;
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        .credentials-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        .credentials-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .credential-item {
+            margin: 0.8em 0;
+            padding: 0.5em 0;
+            border-bottom: 1px dotted var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+        .credential-bullet {
+            color: var(--accent-color);
+            margin-right: 1em;
+            font-weight: bold;
+        }
+        .contact-section {
+            text-align: center;
+            margin: 3em 0 2em 0;
+            padding: 1.5em;
+            background: linear-gradient(135deg, #e0f2f1, #f0f9ff);
+            border-radius: 1em;
+        }
+        .contact-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        .contact-info {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+        .contact-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .author-photo-placeholder {
+                width: 150px;
+                height: 150px;
+            }
+            .author-page-title {
+                font-size: 1.6em;
+            }
+            .author-name {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="author-page-title">{{ about_author_heading }}</h1>
+    <div class="decorative-line"></div>
+
+    <div class="author-container">
+        
+        <!-- Author Photo Section -->
+        <div class="author-photo-section">
+            <!-- Replace with actual author photo -->
+            <div class="author-photo-placeholder">
+                {{ author_photo }}
+            </div>
+            
+            <div class="author-name">{{ author_name }}</div>
+            
+            <div class="author-tagline">
+                {{ author_tagline_or_professional_title }}
+            </div>
+        </div>
+
+        <!-- Author Biography -->
+        <div class="author-bio">
+            <p class="first-paragraph">
+                <span class="author-bio-dropcap">{{ first_letter }}</span>{{ author_bio_opening_paragraph }}
+            </p>
+            
+            <p>{{ author_bio_paragraph_2 }}</p>
+            
+            <p>{{ author_bio_paragraph_3 }}</p>
+        </div>
+
+        <!-- Credentials/Achievements Section -->
+        <div class="credentials-section">
+            <div class="credentials-title">Professional Highlights</div>
+            <ul class="credentials-list">
+                <li class="credential-item">
+                    <span class="credential-bullet">❦</span>
+                    <span>{{ credential_or_achievement_1 }}</span>
+                </li>
+                <li class="credential-item">
+                    <span class="credential-bullet">❦</span>
+                    <span>{{ credential_or_achievement_2 }}</span>
+                </li>
+                <li class="credential-item">
+                    <span class="credential-bullet">❦</span>
+                    <span>{{ credential_or_achievement_3 }}</span>
+                </li>
+                <li class="credential-item">
+                    <span class="credential-bullet">❦</span>
+                    <span>{{ credential_or_achievement_4 }}</span>
+                </li>
+                <li class="credential-item">
+                    <span class="credential-bullet">❦</span>
+                    <span>{{ credential_or_achievement_5 }}</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Additional Bio Information -->
+        <div class="author-bio">
+            <p>{{ personal_interests_or_philosophy_paragraph }}</p>
+            
+            <p>{{ closing_bio_paragraph }}</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-section">
+            <div class="contact-title">Connect with {{ author_first_name }}</div>
+            <div class="contact-info">
+                Website: <a href="{{ website_url }}" class="contact-link">{{ website_display }}</a><br/>
+                Email: <a href="mailto:{{ email }}" class="contact-link">{{ email }}</a><br/>
+                Instagram: <a href="{{ instagram_url }}" class="contact-link">@{{ instagram_handle }}</a><br/>
+                LinkedIn: <a href="{{ linkedin_url }}" class="contact-link">{{ linkedin_profile }}</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

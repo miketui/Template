@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [CHAPTER_NUMBER] - [CHAPTER_TITLE] Content</title>
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
         /* Additional content-specific styling */
         .chapter-content-header {
@@ -64,91 +64,91 @@
     
     <!-- Optional: Chapter content header for continuing pages -->
     <div class="chapter-content-header">
-        Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE]
+        Chapter {{ chapter_number }}: {{ abbreviated_chapter_title }}
     </div>
 
     <!-- ========== MAIN CHAPTER CONTENT ========== -->
     
     <!-- First paragraph (continued from introduction or new section) -->
     <p class="first-paragraph">
-        [CHAPTER_OPENING_PARAGRAPH_OR_CONTINUATION]
+        {{ chapter_opening_paragraph_or_continuation }}
     </p>
     
     <!-- Regular chapter paragraphs -->
-    <p>[PARAGRAPH_CONTENT_1]</p>
+    <p>{{ paragraph_content_1 }}</p>
     
-    <p>[PARAGRAPH_CONTENT_2]</p>
+    <p>{{ paragraph_content_2 }}</p>
     
-    <p>[PARAGRAPH_CONTENT_3]</p>
+    <p>{{ paragraph_content_3 }}</p>
     
     <!-- Section break (optional - use between major sections) -->
     <div class="section-break avoid-break"></div>
     
     <!-- Sub-heading for new section (optional) -->
-    <h3>[SUB_SECTION_HEADING]</h3>
+    <h3>{{ sub_section_heading }}</h3>
     
-    <p>[SUB_SECTION_CONTENT_1]</p>
+    <p>{{ sub_section_content_1 }}</p>
     
-    <p>[SUB_SECTION_CONTENT_2]</p>
+    <p>{{ sub_section_content_2 }}</p>
     
     <!-- Blockquote example -->
     <blockquote class="avoid-break">
-        <p>[QUOTE_TEXT]</p>
+        <p>{{ quote_text }}</p>
         <p style="text-align: right; font-style: normal; font-weight: bold;">
-            — [QUOTE_ATTRIBUTION]
+            — {{ quote_attribution }}
         </p>
     </blockquote>
     
-    <p>[CONTENT_AFTER_QUOTE]</p>
+    <p>{{ content_after_quote }}</p>
     
     <!-- Another section break -->
     <div class="section-break avoid-break"></div>
     
     <!-- More content sections -->
-    <h3>[ANOTHER_SUB_SECTION_HEADING]</h3>
+    <h3>{{ another_sub_section_heading }}</h3>
     
-    <p>[MORE_CONTENT_1]</p>
+    <p>{{ more_content_1 }}</p>
     
-    <p>[MORE_CONTENT_2]</p>
+    <p>{{ more_content_2 }}</p>
     
     <!-- List example (if needed) -->
-    <h4>[LIST_HEADING]</h4>
+    <h4>{{ list_heading }}</h4>
     <ul>
-        <li>[LIST_ITEM_1]</li>
-        <li>[LIST_ITEM_2]</li>
-        <li>[LIST_ITEM_3]</li>
-        <li>[LIST_ITEM_4]</li>
+        <li>{{ list_item_1 }}</li>
+        <li>{{ list_item_2 }}</li>
+        <li>{{ list_item_3 }}</li>
+        <li>{{ list_item_4 }}</li>
     </ul>
     
-    <p>[CONTENT_AFTER_LIST]</p>
+    <p>{{ content_after_list }}</p>
     
     <!-- ========== CHAPTER CONCLUSION ========== -->
     <div class="section-break avoid-break"></div>
     
     <h3>REFLECTION</h3>
     
-    <p>[CHAPTER_CONCLUSION_PARAGRAPH_1]</p>
+    <p>{{ chapter_conclusion_paragraph_1 }}</p>
     
-    <p>[CHAPTER_CONCLUSION_PARAGRAPH_2]</p>
+    <p>{{ chapter_conclusion_paragraph_2 }}</p>
     
     <!-- ========== ENDNOTES SECTION ========== -->
     <div class="endnotes-section avoid-break">
         <h3>ENDNOTES</h3>
         
         <div class="endnote-item">
-            <sup>1</sup> [ENDNOTE_1_FULL_CITATION_AND_EXPLANATION]
+            <sup>1</sup> {{ endnote_1_full_citation_and_explanation }}
         </div>
         
         <div class="endnote-item">
-            <sup>2</sup> [ENDNOTE_2_FULL_CITATION_AND_EXPLANATION]
+            <sup>2</sup> {{ endnote_2_full_citation_and_explanation }}
         </div>
         
         <div class="endnote-item">
-            <sup>3</sup> [ENDNOTE_3_FULL_CITATION_AND_EXPLANATION]
+            <sup>3</sup> {{ endnote_3_full_citation_and_explanation }}
         </div>
         
         <div class="endnote-item">
-            <sup>4</sup> [ENDNOTE_4_FULL_CITATION_AND_EXPLANATION]
+            <sup>4</sup> {{ endnote_4_full_citation_and_explanation }}
         </div>
         
         <!-- Add more endnotes as needed -->
@@ -156,7 +156,7 @@
     
     <!-- Page number (adjust as needed for each page) -->
     <div class="page-number">
-        [PAGE_NUMBER]
+        {{ page_number }}
     </div>
 
     <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->

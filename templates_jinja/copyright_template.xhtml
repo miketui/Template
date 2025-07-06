@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Copyright - Curls&amp;Contemplation</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -78,31 +78,31 @@
         
         <!-- Book Title and Subtitle -->
         <div class="book-title-copyright">
-            Curls&amp;Contemplation
+            {{ book_title }}
         </div>
         <div class="book-subtitle-copyright">
-            A Stylist's Interactive Guide to Conscious Beauty and Professional Growth
+            {{ book_subtitle }}
         </div>
         
         <!-- Copyright Information -->
         <div class="copyright-info">
-            © [YEAR] [AUTHOR_NAME]<br/>
-            [PUBLISHER_NAME]
+            © {{ year }} {{ author_name }}<br/>
+            {{ publisher_name }}
         </div>
         
         <!-- ISBN Section -->
         <div class="isbn-section">
-            EBOOK: [EBOOK_ISBN]<br/>
-            PAPERBACK: [PAPERBACK_ISBN]<br/>
-            LARGE PRINT: [LARGE_PRINT_ISBN]<br/>
-            HB: [HARDBACK_ISBN]<br/>
-            AUDIO: [AUDIO_ISBN]
+            EBOOK: {{ ebook_isbn }}<br/>
+            PAPERBACK: {{ paperback_isbn }}<br/>
+            LARGE PRINT: {{ large_print_isbn }}<br/>
+            HB: {{ hardback_isbn }}<br/>
+            AUDIO: {{ audio_isbn }}
         </div>
         
         <!-- Rights Statement -->
         <div class="rights-section">
             The author's moral rights have been asserted.<br/>
-            All rights reserved. Enquiries: <a href="mailto:[CONTACT_EMAIL]" class="contact-link">[CONTACT_EMAIL]</a>
+            All rights reserved. Enquiries: <a href="mailto:{{ contact_email }}" class="contact-link">{{ contact_email }}</a>
         </div>
         
         <!-- Publisher Logo/Symbol (optional) -->
@@ -115,7 +115,7 @@
         
         <!-- Publisher Information -->
         <div class="publisher-info">
-            Created with [PUBLISHING_PLATFORM]
+            Created with {{ publishing_platform }}
         </div>
         
     </div>
@@ -130,12 +130,12 @@
     4. ELEGANT DESIGN: Clean, centered layout with proper hierarchy
     
     TO CUSTOMIZE:
-    - Replace [YEAR] with publication year
-    - Replace [AUTHOR_NAME] with your name
-    - Replace [PUBLISHER_NAME] with your publishing company
-    - Replace [EBOOK_ISBN], [PAPERBACK_ISBN], etc. with actual ISBNs
-    - Replace [CONTACT_EMAIL] with your contact email
-    - Replace [PUBLISHING_PLATFORM] with your platform (e.g., "Kindle Direct Publishing")
+    - Replace {{ year }} with publication year
+    - Replace {{ author_name }} with your name
+    - Replace {{ publisher_name }} with your publishing company
+    - Replace {{ ebook_isbn }}, {{ paperback_isbn }}, etc. with actual ISBNs
+    - Replace {{ contact_email }} with your contact email
+    - Replace {{ publishing_platform }} with your platform (e.g., "Kindle Direct Publishing")
     - Add actual publisher logo if desired
     
     STANDARD COPYRIGHT PAGE ELEMENTS INCLUDED:

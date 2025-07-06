@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [CHAPTER_NUMBER] Worksheet - [CHAPTER_TITLE]</title>
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
         /* Worksheet-specific styling */
         .worksheet-page-header {
@@ -119,21 +119,21 @@
     
     <!-- Worksheet header -->
     <div class="worksheet-page-header">
-        Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE] - Practical Application
+    {{ worksheet_header }}
     </div>
 
     <!-- Worksheet title -->
-    <h1 class="worksheet-title">[WORKSHEET_TITLE]</h1>
+    <h1 class="worksheet-title">{{ worksheet_title }}</h1>
     
     <!-- Worksheet subtitle/instructions -->
     <p class="worksheet-subtitle">
-        [WORKSHEET_DESCRIPTION_OR_INSTRUCTIONS]
+        {{ worksheet_description_or_instructions }}
     </p>
 
     <!-- Section 1: Goal Setting -->
     <div class="worksheet-section">
-        <div class="section-title">[SECTION_1_TITLE]</div>
-        <p class="prompt-text">[SECTION_1_PROMPT_TEXT]</p>
+        <div class="section-title">{{ section_1_title }}</div>
+        <p class="prompt-text">{{ section_1_prompt_text }}</p>
         
         <p>My primary goal for this chapter is: <span class="fill-in-line"></span></p>
         
@@ -146,8 +146,8 @@
 
     <!-- Section 2: Two-Column Assessment -->
     <div class="worksheet-section">
-        <div class="section-title">[SECTION_2_TITLE]</div>
-        <p class="prompt-text">[SECTION_2_PROMPT_TEXT]</p>
+        <div class="section-title">{{ section_2_title }}</div>
+        <p class="prompt-text">{{ section_2_prompt_text }}</p>
         
         <div class="two-column">
             <div class="column">
@@ -167,8 +167,8 @@
 
     <!-- Section 3: Rating Scale -->
     <div class="worksheet-section">
-        <div class="section-title">[SECTION_3_TITLE]</div>
-        <p class="prompt-text">[SECTION_3_PROMPT_TEXT]</p>
+        <div class="section-title">{{ section_3_title }}</div>
+        <p class="prompt-text">{{ section_3_prompt_text }}</p>
         
         <p>Rate your current confidence level (1 = Low, 5 = High):</p>
         <div class="rating-scale">
@@ -184,24 +184,24 @@
 
     <!-- Section 4: Checklist/Action Items -->
     <div class="worksheet-section">
-        <div class="section-title">[SECTION_4_TITLE]</div>
-        <p class="prompt-text">[SECTION_4_PROMPT_TEXT]</p>
+        <div class="section-title">{{ section_4_title }}</div>
+        <p class="prompt-text">{{ section_4_prompt_text }}</p>
         
         <div class="checklist-item">
             <div class="checkbox"></div>
-            <span>[CHECKLIST_ITEM_1]</span>
+            <span>{{ checklist_item_1 }}</span>
         </div>
         <div class="checklist-item">
             <div class="checkbox"></div>
-            <span>[CHECKLIST_ITEM_2]</span>
+            <span>{{ checklist_item_2 }}</span>
         </div>
         <div class="checklist-item">
             <div class="checkbox"></div>
-            <span>[CHECKLIST_ITEM_3]</span>
+            <span>{{ checklist_item_3 }}</span>
         </div>
         <div class="checklist-item">
             <div class="checkbox"></div>
-            <span>[CHECKLIST_ITEM_4]</span>
+            <span>{{ checklist_item_4 }}</span>
         </div>
     </div>
 
@@ -217,7 +217,7 @@
 
     <!-- Page number -->
     <div class="page-number">
-        [PAGE_NUMBER]
+        {{ page_number }}
     </div>
 
     <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
@@ -232,10 +232,10 @@
     6. INTERACTIVE ELEMENTS: Checkboxes, rating circles, fill-in areas
     
     TO CUSTOMIZE:
-    - Replace [WORKSHEET_TITLE] with specific worksheet name
-    - Replace [SECTION_X_TITLE] with relevant section headings
-    - Replace [SECTION_X_PROMPT_TEXT] with instructions
-    - Replace [CHECKLIST_ITEM_X] with specific action items
+    - Replace {{ worksheet_title }} with specific worksheet name
+    - Replace {{ section_x_title }} with relevant section headings
+    - Replace {{ section_x_prompt_text }} with instructions
+    - Replace {{ checklist_item_x }} with specific action items
     - Adjust fill-in-box heights as needed for content
     -->
 

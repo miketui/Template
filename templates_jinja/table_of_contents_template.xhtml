@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Table of Contents specific styling */
+        .contents-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .toc-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1em 0;
+            column-count: 2;
+            column-gap: 3em;
+            column-fill: balance;
+        }
+        .toc-section {
+            margin: 1.5em 0;
+        }
+        .part-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1.5em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+        }
+        .toc-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 0.8em 0;
+            padding: 0.3em 0;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .entry-title {
+            flex-grow: 1;
+            font-size: 0.95em;
+            color: var(--primary-color);
+        }
+        .chapter-entry .entry-title {
+            margin-left: 1.5em;
+            font-style: italic;
+        }
+        .entry-page {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            margin-left: 1em;
+        }
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2.5em 0;
+        }
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 0 1em;
+        }
+        .divider-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--accent-color);
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .contents-title {
+                font-size: 1.6em;
+            }
+            .toc-entry {
+                font-size: 0.9em;
+            }
+            .chapter-entry .entry-title {
+                margin-left: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="contents-title">{{ contents_heading }}</h1>
+    <div class="decorative-line"></div>
+    
+    <!-- Table of Contents -->
+    <div class="toc-container">
+
+        <!-- Front Matter -->
+        <div class="toc-section">
+            {% for item in front_matter %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ item }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">❦</div>
+            <div class="divider-line"></div>
+        </div>
+
+        {% for part in parts %}
+        <div class="toc-section">
+            <h2 class="part-title">{{ part.title }}</h2>
+            {% if part.title_entry %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ part.title_entry }}</div>
+            </div>
+            {% endif %}
+            {% for chapter in part.chapters %}
+            <div class="toc-entry chapter-entry">
+                <div class="entry-title">{{ chapter }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">❦</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Back Matter -->
+        <div class="toc-section">
+            {% for item in back_matter %}
+            <div class="toc-entry">
+                <div class="entry-title">{{ item }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    TABLE OF CONTENTS TEMPLATE USAGE:
+    
+    1. SINGLE PAGE LAYOUT: All content organized on one page
+    2. HIERARCHICAL STRUCTURE: Clear distinction between parts and chapters
+    3. ELEGANT DIVIDERS: Decorative separators between sections
+    4. RESPONSIVE DESIGN: Adapts to different screen sizes
+    5. CHAPTER INDENTATION: Chapters are indented under their parts
+    
+    CUSTOMIZATION OPTIONS:
+    - Add page numbers in .entry-page spans if needed for print version
+    - Adjust chapter titles to match your actual chapter names
+    - Modify part titles if structure changes
+    - Add or remove back matter entries as needed
+    
+    STRUCTURE:
+    - Front matter (no page numbers typically)
+    - Four main parts with chapters
+    - Back matter and journal sections
+    -->
+
+</body>
+</html>

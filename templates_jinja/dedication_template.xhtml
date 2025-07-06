@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Dedication - Curls&amp;Contemplation</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -91,22 +91,22 @@
         <div class="decorative-flourish">❦ ❦ ❦</div>
         
         <!-- Dedication title -->
-        <h1 class="dedication-title">DEDICATION</h1>
+        <h1 class="dedication-title">{{ dedication_heading }}</h1>
         
         <!-- Dedication content with huge dropcap -->
         <div class="dedication-content">
             <div class="dedication-text">
-                <span class="dedication-dropcap">D</span>edicated to every stylist who dares to dream beyond the conventional, who sees beauty as a sacred art, and who believes in the transformative power of conscious creativity. This book is for those who understand that hairstyling is not just a profession, but a calling to elevate and inspire.
+                <span class="dedication-dropcap">{{ first_letter }}</span>{{ dedication_text }}
             </div>
             
             <!-- Additional dedication paragraphs if needed -->
             <div class="dedication-text">
-                [ADDITIONAL_DEDICATION_PARAGRAPH_IF_NEEDED]
+                {{ additional_dedication_paragraph_if_needed }}
             </div>
             
             <!-- Optional signature/attribution -->
             <div class="dedication-signature">
-                [AUTHOR_SIGNATURE_OR_ATTRIBUTION]
+                {{ author_signature_or_attribution }}
             </div>
         </div>
         

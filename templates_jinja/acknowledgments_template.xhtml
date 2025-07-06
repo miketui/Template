@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Acknowledgments - Curls&amp;Contemplation</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -124,20 +124,20 @@
 <body>
 
     <!-- Title -->
-    <h1 class="acknowledgments-title">ACKNOWLEDGMENTS</h1>
+    <h1 class="acknowledgments-title">{{ acknowledgments_heading }}</h1>
     <div class="decorative-line"></div>
     
     <p class="acknowledgments-subtitle">
-        With Heartfelt Gratitude
+        {{ acknowledgments_subtitle }}
     </p>
 
     <!-- Opening Acknowledgment -->
     <div class="acknowledgments-content">
         <p class="first-paragraph">
-            <span class="acknowledgments-dropcap">[FIRST_LETTER]</span>[OPENING_ACKNOWLEDGMENT_PARAGRAPH]
+            <span class="acknowledgments-dropcap">{{ first_letter }}</span>{{ opening_acknowledgment_paragraph }}
         </p>
         
-        <p>[GENERAL_GRATITUDE_PARAGRAPH]</p>
+        <p>{{ general_gratitude_paragraph }}</p>
     </div>
 
     <!-- Categorized Thanks Section -->
@@ -145,43 +145,43 @@
         
         <!-- Professional Thanks -->
         <div class="thanks-category">
-            <div class="category-title">Professional Mentors & Colleagues</div>
+            <div class="category-title">{{ professional_category_title }}</div>
             <div class="thanks-list">
-                <div class="thanks-item">[PROFESSIONAL_THANK_YOU_1]</div>
-                <div class="thanks-item">[PROFESSIONAL_THANK_YOU_2]</div>
-                <div class="thanks-item">[PROFESSIONAL_THANK_YOU_3]</div>
-                <div class="thanks-item">[PROFESSIONAL_THANK_YOU_4]</div>
+                <div class="thanks-item">{{ professional_thank_you_1 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_2 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_3 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_4 }}</div>
             </div>
         </div>
 
         <!-- Editorial Team -->
         <div class="thanks-category">
-            <div class="category-title">Editorial & Creative Team</div>
+            <div class="category-title">{{ editorial_category_title }}</div>
             <div class="thanks-list">
-                <div class="thanks-item">[EDITOR_THANK_YOU]</div>
-                <div class="thanks-item">[DESIGNER_THANK_YOU]</div>
-                <div class="thanks-item">[PROOFREADER_THANK_YOU]</div>
-                <div class="thanks-item">[BETA_READERS_THANK_YOU]</div>
+                <div class="thanks-item">{{ editor_thank_you }}</div>
+                <div class="thanks-item">{{ designer_thank_you }}</div>
+                <div class="thanks-item">{{ proofreader_thank_you }}</div>
+                <div class="thanks-item">{{ beta_readers_thank_you }}</div>
             </div>
         </div>
 
         <!-- Personal Support -->
         <div class="thanks-category">
-            <div class="category-title">Personal Support System</div>
+            <div class="category-title">{{ personal_support_category_title }}</div>
             <div class="thanks-list">
-                <div class="thanks-item">[FAMILY_THANK_YOU]</div>
-                <div class="thanks-item">[FRIENDS_THANK_YOU]</div>
-                <div class="thanks-item">[PERSONAL_SUPPORTERS_THANK_YOU]</div>
+                <div class="thanks-item">{{ family_thank_you }}</div>
+                <div class="thanks-item">{{ friends_thank_you }}</div>
+                <div class="thanks-item">{{ personal_supporters_thank_you }}</div>
             </div>
         </div>
 
         <!-- Community & Readers -->
         <div class="thanks-category">
-            <div class="category-title">Community & Early Readers</div>
+            <div class="category-title">{{ community_category_title }}</div>
             <div class="thanks-list">
-                <div class="thanks-item">[COMMUNITY_THANK_YOU]</div>
-                <div class="thanks-item">[SOCIAL_MEDIA_SUPPORTERS_THANK_YOU]</div>
-                <div class="thanks-item">[EARLY_READERS_THANK_YOU]</div>
+                <div class="thanks-item">{{ community_thank_you }}</div>
+                <div class="thanks-item">{{ social_media_supporters_thank_you }}</div>
+                <div class="thanks-item">{{ early_readers_thank_you }}</div>
             </div>
         </div>
 
@@ -190,26 +190,26 @@
     <!-- Special Thanks Box -->
     <div class="special-thanks">
         <div class="special-thanks-title">Special Recognition</div>
-        <p>[SPECIAL_THANKS_CONTENT_FOR_KEY_PERSON_OR_INSPIRATION]</p>
+        <p>{{ special_thanks_content_for_key_person_or_inspiration }}</p>
     </div>
 
     <!-- Additional Personal Thanks -->
     <div class="acknowledgments-content">
-        <p>[ADDITIONAL_PERSONAL_THANKS_PARAGRAPH]</p>
+        <p>{{ additional_personal_thanks_paragraph }}</p>
         
-        <p>[INSPIRATION_OR_DEDICATION_PARAGRAPH]</p>
+        <p>{{ inspiration_or_dedication_paragraph }}</p>
     </div>
 
     <!-- Closing Gratitude -->
     <div class="closing-gratitude">
-        "[CLOSING_GRATITUDE_QUOTE_OR_SENTIMENT]"
+        "{{ closing_gratitude_quote_or_sentiment }}"
     </div>
 
     <!-- Author Signature -->
     <div class="author-signature">
         With endless gratitude,<br/>
-        [AUTHOR_NAME]<br/>
-        [DATE_OR_LOCATION]
+        {{ author_name }}<br/>
+        {{ date_or_location }}
     </div>
 
 </body>

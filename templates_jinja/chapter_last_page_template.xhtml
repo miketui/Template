@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [CHAPTER_NUMBER] - Inspiration</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
@@ -86,14 +86,14 @@
             Image should be placed in an "images" folder relative to your HTML files
             Example: ../images/chapter01_quote.jpg
             -->
-            <img src="[IMAGE_FILE_PATH]" 
-                 alt="[IMAGE_ALT_TEXT_DESCRIPTION]" 
+            <img src="{{ image_file_path }}" 
+                 alt="{{ image_alt_text_description }}" 
                  class="chapter-quote-image" />
         </div>
         
         <!-- Optional: Chapter completion note -->
         <div class="chapter-completion-note">
-            End of Chapter [CHAPTER_NUMBER]
+            End of Chapter {{ chapter_number }}
         </div>
         
         <!-- Decorative flourish (optional) -->
@@ -112,9 +112,9 @@
     5. FLEXIBLE: Can accommodate different image sizes and aspect ratios
     
     TO CUSTOMIZE:
-    - Replace [IMAGE_FILE_PATH] with actual image path (e.g., ../images/chapter01_quote.jpg)
-    - Replace [IMAGE_ALT_TEXT_DESCRIPTION] with descriptive alt text for accessibility
-    - Replace [CHAPTER_NUMBER] with the specific chapter number
+    - Replace {{ image_file_path }} with actual image path (e.g., ../images/chapter01_quote.jpg)
+    - Replace {{ image_alt_text_description }} with descriptive alt text for accessibility
+    - Replace {{ chapter_number }} with the specific chapter number
     - Remove decorative flourishes if not desired
     - Adjust max-width percentage if needed for image sizing
     
@@ -126,7 +126,7 @@
     
     FILE ORGANIZATION:
     - Place images in: /images/ folder
-    - Naming convention: chapter[XX]_quote.jpg (e.g., chapter01_quote.jpg)
+    - Naming convention: chapter{{ xx }}_quote.jpg (e.g., chapter01_quote.jpg)
     - Ensure consistent aspect ratios across chapters for uniform appearance
     -->
 

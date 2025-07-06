@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>[JOURNAL_TYPE] - Curls&amp;Contemplation</title><link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
         /* Journal worksheet specific styling */
@@ -133,7 +134,7 @@
             padding-bottom: 5px;
         }
 
-```
+
     /* Responsive adjustments */
     @media screen and (max-width: 600px) {
         .journal-title {
@@ -150,50 +151,50 @@
         }
     }
 </style>
-```
+
 
 </head>
 <body>
 
-```
+
 <!-- Date Section -->
 <div class="date-section">
     Date: _______________
 </div>
 
 <!-- Title -->
-<h1 class="journal-title">[JOURNAL_TYPE]</h1>
+<h1 class="journal-title">{{ journal_type }}</h1>
 <div class="decorative-line"></div>
 
 <p class="journal-subtitle">
-    [JOURNAL_SUBTITLE_OR_PURPOSE]
+    {{ journal_subtitle_or_purpose }}
 </p>
 
 <!-- Journal Prompt Section 1 -->
 <div class="journal-prompt-section">
-    <div class="prompt-header">[PROMPT_SECTION_1_TITLE]</div>
-    <p class="prompt-text">[PROMPT_1_QUESTION_OR_INSTRUCTION]</p>
+    <div class="prompt-header">{{ prompt_section_1_title }}</div>
+    <p class="prompt-text">{{ prompt_1_question_or_instruction }}</p>
     <div class="journal-space journal-space-large"></div>
 </div>
 
 <!-- Two-Column Section (for comparative exercises) -->
 <div class="two-column-journal">
     <div class="journal-column">
-        <div class="prompt-header" style="font-size: 1em;">[LEFT_COLUMN_TITLE]</div>
-        <p class="prompt-text">[LEFT_COLUMN_PROMPT]</p>
+        <div class="prompt-header" style="font-size: 1em;">{{ left_column_title }}</div>
+        <p class="prompt-text">{{ left_column_prompt }}</p>
         <div class="journal-space"></div>
     </div>
     <div class="journal-column">
-        <div class="prompt-header" style="font-size: 1em;">[RIGHT_COLUMN_TITLE]</div>
-        <p class="prompt-text">[RIGHT_COLUMN_PROMPT]</p>
+        <div class="prompt-header" style="font-size: 1em;">{{ right_column_title }}</div>
+        <p class="prompt-text">{{ right_column_prompt }}</p>
         <div class="journal-space"></div>
     </div>
 </div>
 
 <!-- Gratitude/List Section -->
 <div class="journal-prompt-section">
-    <div class="prompt-header">[LIST_SECTION_TITLE]</div>
-    <p class="prompt-text">[LIST_PROMPT_INSTRUCTION]</p>
+    <div class="prompt-header">{{ list_section_title }}</div>
+    <p class="prompt-text">{{ list_prompt_instruction }}</p>
     <ul class="gratitude-list">
         <li class="gratitude-item">
             <span class="gratitude-number">1.</span>
@@ -220,18 +221,18 @@
 
 <!-- Reflection Box -->
 <div class="reflection-box">
-    <div class="reflection-title">[REFLECTION_SECTION_TITLE]</div>
-    <p class="prompt-text">[REFLECTION_PROMPT]</p>
+    <div class="reflection-title">{{ reflection_section_title }}</div>
+    <p class="prompt-text">{{ reflection_prompt }}</p>
     <div class="journal-space journal-space-large"></div>
 </div>
 
 <!-- Final Prompt Section -->
 <div class="journal-prompt-section">
-    <div class="prompt-header">[FINAL_SECTION_TITLE]</div>
-    <p class="prompt-text">[FINAL_PROMPT_OR_COMMITMENT]</p>
+    <div class="prompt-header">{{ final_section_title }}</div>
+    <p class="prompt-text">{{ final_prompt_or_commitment }}</p>
     <div class="journal-space journal-space-small"></div>
 </div>
-```
+
 
 </body>
 </html>

@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chapter [CHAPTER_NUMBER] Activity - [CHAPTER_TITLE]</title><link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <style type="text/css">
         /* Activity worksheet specific styling */
@@ -143,68 +144,68 @@
 </head>
 <body>
 
-```
+
 <!-- Page break before worksheet -->
 <div class="page-break"></div>
 
 <!-- Activity header -->
 <div class="activity-page-header">
-    Chapter [CHAPTER_NUMBER]: [ABBREVIATED_CHAPTER_TITLE] - Interactive Exercise
+    {{ activity_header }}
 </div>
 
 <!-- Activity title -->
-<h1 class="activity-title">[ACTIVITY_TITLE]</h1>
+<h1 class="activity-title">{{ activity_title }}</h1>
 
 <!-- Activity subtitle/instructions -->
 <p class="activity-subtitle">
-    [ACTIVITY_DESCRIPTION_OR_INSTRUCTIONS]
+    {{ activity_description_or_instructions }}
 </p>
 
 <!-- Activity 1: Step-by-Step Exercise -->
 <div class="activity-section">
-    <div class="activity-header">[ACTIVITY_1_TITLE]</div>
+    <div class="activity-header">{{ activity_1_title }}</div>
     
     <div class="exercise-box">
         <div class="step-item">
             <div class="step-number">1</div>
-            <div>[STEP_1_INSTRUCTION]</div>
+            <div>{{ step_1_instruction }}</div>
         </div>
         <div class="step-item">
             <div class="step-number">2</div>
-            <div>[STEP_2_INSTRUCTION]</div>
+            <div>{{ step_2_instruction }}</div>
         </div>
         <div class="step-item">
             <div class="step-number">3</div>
-            <div>[STEP_3_INSTRUCTION]</div>
+            <div>{{ step_3_instruction }}</div>
         </div>
     </div>
     
     <div class="creative-space">
-        [CREATIVE_SPACE_PROMPT] - Use this space for your response
+        {{ creative_space_prompt }}
     </div>
 </div>
 
 <!-- Activity 2: Three-Column Comparison -->
 <div class="activity-section">
-    <div class="activity-header">[ACTIVITY_2_TITLE]</div>
+    <div class="activity-header">{{ activity_2_title }}</div>
     
     <div class="three-column">
         <div class="column-third">
-            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_1_TITLE]</h4>
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">{{ column_1_title }}</h4>
             <div class="thinking-bubble">
-                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_1_PROMPT]</p>
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">{{ column_1_prompt }}</p>
             </div>
         </div>
         <div class="column-third">
-            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_2_TITLE]</h4>
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">{{ column_2_title }}</h4>
             <div class="thinking-bubble">
-                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_2_PROMPT]</p>
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">{{ column_2_prompt }}</p>
             </div>
         </div>
         <div class="column-third">
-            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">[COLUMN_3_TITLE]</h4>
+            <h4 style="color: var(--accent-color); margin-top: 0; text-align: center;">{{ column_3_title }}</h4>
             <div class="thinking-bubble">
-                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">[COLUMN_3_PROMPT]</p>
+                <p style="margin: 0; font-style: italic; color: #666; text-align: center;">{{ column_3_prompt }}</p>
             </div>
         </div>
     </div>
@@ -212,25 +213,25 @@
     <div class="connection-line"></div>
     
     <div class="priority-box">
-        <strong>Connection Insight:</strong> [CONNECTION_PROMPT_TEXT]
+        <strong>Connection Insight:</strong> {{ connection_prompt_text }}
     </div>
 </div>
 
 <!-- Activity 3: Creative Mapping -->
 <div class="activity-section">
-    <div class="activity-header">[ACTIVITY_3_TITLE]</div>
+    <div class="activity-header">{{ activity_3_title }}</div>
     
-    <p style="font-style: italic; margin-bottom: 1em;">[ACTIVITY_3_INSTRUCTIONS]</p>
+    <p style="font-style: italic; margin-bottom: 1em;">{{ activity_3_instructions }}</p>
     
     <div style="border: 2px solid var(--accent-color); border-radius: 1em; padding: 1.5em; background: #f9f9f9; min-height: 140px; position: relative;">
-        <div style="position: absolute; top: 10px; right: 15px; color: var(--accent-color); font-weight: bold;">[ACTIVITY_3_TITLE]</div>
+        <div style="position: absolute; top: 10px; right: 15px; color: var(--accent-color); font-weight: bold;">{{ activity_3_title }}</div>
         <div style="text-align: center; margin-top: 2em;">
             <div style="border: 2px dashed #ccc; border-radius: 50%; width: 80px; height: 80px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-style: italic; color: #888; font-size: 0.9em;">
                 Center
             </div>
         </div>
         <p style="text-align: center; margin-top: 1em; font-style: italic; color: #666;">
-            [MAPPING_INSTRUCTIONS]
+            {{ mapping_instructions }}
         </p>
     </div>
 </div>
@@ -257,7 +258,7 @@
 
 <!-- Page number -->
 <div class="page-number">
-    [PAGE_NUMBER]
+    {{ page_number }}
 </div>
 
 <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
@@ -272,14 +273,14 @@ WORKSHEET TEMPLATE 2 USAGE (Activity-Based):
 6. REFLECTION COMPONENTS: Insight and action planning sections
 
 TO CUSTOMIZE:
-- Replace [ACTIVITY_TITLE] with specific activity name
-- Replace [ACTIVITY_X_TITLE] with section headings
-- Replace [STEP_X_INSTRUCTION] with specific steps
-- Replace [COLUMN_X_TITLE] and [COLUMN_X_PROMPT] for comparisons
-- Replace [MAPPING_INSTRUCTIONS] for creative exercises
+- Replace {{ activity_title }} with specific activity name
+- Replace {{ activity_x_title }} with section headings
+- Replace {{ step_x_instruction }} with specific steps
+- Replace {{ column_x_title }} and {{ column_x_prompt }} for comparisons
+- Replace {{ mapping_instructions }} for creative exercises
 - Adjust creative-space height and content as needed
 -->
-```
+
 
 </body>
 </html>
