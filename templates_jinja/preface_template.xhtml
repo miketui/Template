@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Preface specific styling - modeled after chapter title page */
+        .preface-header {
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+            margin-bottom: 0.5em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .preface-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2.2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 1.5em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: normal;
+        }
+        .preface-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .preface-quote-container {
+            background: #e0f2f1;
+            border: 2px solid var(--accent-color);
+            border-radius: 1em;
+            box-shadow: var(--shadow-light);
+            padding: 1.2em 2em;
+            margin: 2em auto;
+            max-width: 85%;
+            text-align: center;
+        }
+        .preface-quote {
+            font-style: italic;
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.05em;
+            color: var(--primary-color);
+        }
+        .quote-attribution {
+            font-weight: bold;
+            margin: 0.5em 0 0 0;
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+        .preface-content {
+            margin: 2.5em 0;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .preface-dropcap {
+            float: left;
+            font-size: 3.2em;
+            line-height: 0.95;
+            margin: 0.10em 0.18em 0 0;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            background: #e0f7fa;
+            padding: 0.13em 0.21em 0.05em 0.17em;
+            border-radius: 0.4em;
+            box-shadow: 0 1px 5px rgba(23,151,166,0.10);
+        }
+        .preface-section {
+            margin: 2em 0;
+        }
+        .preface-signature {
+            text-align: right;
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-top: 3em;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .preface-title {
+                font-size: 1.8em;
+            }
+            .preface-quote-container {
+                max-width: 95%;
+                padding: 1em;
+            }
+            .preface-dropcap {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Book title at top -->
+    <p class="preface-header">
+        {{ preface_header }}
+    </p>
+    
+    <!-- Decorative accent line -->
+    <div class="decorative-top-accent"></div>
+    
+    <!-- Preface title -->
+    <h1 class="preface-title">PREFACE</h1>
+    
+    <!-- Optional subtitle -->
+    <p class="preface-subtitle">
+        {{ preface_subtitle_if_needed }}
+    </p>
+    
+    <!-- Optional quote (similar to bible quote in chapter title) -->
+    <div class="preface-quote-container">
+        <p class="preface-quote">
+            {{ inspirational_quote_text }}
+        </p>
+        <p class="quote-attribution">
+            — {{ quote_author }}
+        </p>
+    </div>
+    
+    <!-- Preface content with dropcap -->
+    <div class="preface-content">
+        <p class="first-paragraph">
+            <span class="preface-dropcap">{{ first_letter }}</span>{{ preface_opening_continued }}
+        </p>
+        
+        <div class="preface-section">
+            <p>{{ preface_paragraph_2 }}</p>
+            
+            <p>{{ preface_paragraph_3 }}</p>
+        </div>
+        
+        <div class="preface-section">
+            <p>{{ preface_paragraph_4 }}</p>
+            
+            <p>{{ preface_paragraph_5 }}</p>
+        </div>
+        
+        <div class="preface-section">
+            <p>{{ preface_closing_paragraph }}</p>
+        </div>
+        
+        <!-- Author signature -->
+        <div class="preface-signature">
+            {{ author_name }}<br/>
+            {{ location_and_date }}
+        </div>
+    </div>
+
+</body>
+</html>

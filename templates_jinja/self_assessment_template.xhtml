@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Self Assessment specific styling */
+        .assessment-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .introduction {
+            text-align: center;
+            font-size: 1em;
+            color: var(--secondary-color);
+            margin: 2em auto;
+            max-width: 80%;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .columns-container {
+            display: table;
+            width: 100%;
+            margin: 2em 0;
+            table-layout: fixed;
+        }
+        .column {
+            display: table-cell;
+            width: 48%;
+            vertical-align: top;
+            padding: 0 1%;
+        }
+        .question-container {
+            margin: 1.5em 0;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .question-number {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1em;
+            margin-bottom: 0.5em;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .question-text {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 0.8em;
+            color: var(--primary-color);
+        }
+        .bold-text {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .answer-space {
+            border-bottom: 1px solid var(--border-color);
+            min-height: 60px;
+            margin: 0.5em 0 1em 0;
+            padding: 0.5em 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                transparent 85%,
+                var(--border-color) 85%,
+                var(--border-color) 87%,
+                transparent 87%
+            );
+            background-size: 100% 20px;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .columns-container {
+                display: block;
+            }
+            .column {
+                display: block;
+                width: 100%;
+                padding: 0;
+            }
+            .assessment-title {
+                font-size: 1.6em;
+            }
+            .introduction {
+                max-width: 95%;
+            }
+        }
+        
+        /* Print adjustments */
+        @media print {
+            .answer-space {
+                min-height: 40px;
+                background: none;
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title and introduction -->
+    <h1 class="assessment-title">SELF-ASSESSMENT</h1>
+    <div class="decorative-line"></div>
+    
+    <p class="introduction">
+        {{ introduction_text }}
+    </p>
+    
+    <!-- Two-column layout -->
+    <div class="columns-container">
+        
+        <!-- Left column - Questions 1-5 -->
+        <div class="column">
+            
+            <!-- Question 1 -->
+            <div class="question-container">
+                <div class="question-number">1.</div>
+                <div class="question-text">
+                    {{ question_1_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question-container">
+                <div class="question-number">2.</div>
+                <div class="question-text">
+                    {{ question_2_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question-container">
+                <div class="question-number">3.</div>
+                <div class="question-text">
+                    {{ question_3_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question-container">
+                <div class="question-number">4.</div>
+                <div class="question-text">
+                    {{ question_4_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 5 -->
+            <div class="question-container">
+                <div class="question-number">5.</div>
+                <div class="question-text">
+                    {{ question_5_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+        </div>
+        
+        <!-- Right column - Questions 6-10 -->
+        <div class="column">
+            
+            <!-- Question 6 -->
+            <div class="question-container">
+                <div class="question-number">6.</div>
+                <div class="question-text">
+                    {{ question_6_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 7 -->
+            <div class="question-container">
+                <div class="question-number">7.</div>
+                <div class="question-text">
+                    {{ question_7_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 8 -->
+            <div class="question-container">
+                <div class="question-number">8.</div>
+                <div class="question-text">
+                    {{ question_8_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 9 -->
+            <div class="question-container">
+                <div class="question-number">9.</div>
+                <div class="question-text">
+                    {{ question_9_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+            <!-- Question 10 -->
+            <div class="question-container">
+                <div class="question-number">10.</div>
+                <div class="question-text">
+                    {{ question_10_text }}
+                </div>
+                <div class="answer-space"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+    <!--
+    SELF ASSESSMENT TEMPLATE USAGE:
+    
+    1. SINGLE PAGE LAYOUT: Two-column design fits all 10 questions on one page
+    2. ELEGANT FORMATTING: Professional typography with clear hierarchy
+    3. INTERACTIVE ELEMENTS: Answer spaces with lined backgrounds for writing
+    4. RESPONSIVE DESIGN: Converts to single column on mobile devices
+    5. PRINT READY: Optimized for both digital and print formats
+    
+    FEATURES:
+    - Bold question prompts for emphasis
+    - Consistent spacing and typography
+    - Answer spaces with subtle line guides
+    - Professional color scheme
+    - Proper page break controls
+    
+    CUSTOMIZATION:
+    - Adjust answer space heights as needed
+    - Modify question text as required
+    - Add or remove questions while maintaining balance
+    - Customize colors to match brand
+    -->
+
+</body>
+</html>

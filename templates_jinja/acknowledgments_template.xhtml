@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="../styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <style type="text/css">
+        /* Acknowledgments specific styling */
+        .acknowledgments-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 2em;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 2em 0 1em 0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .acknowledgments-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 2em;
+            font-style: italic;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        .acknowledgments-content {
+            margin: 2em 0;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .acknowledgments-dropcap {
+            float: left;
+            font-size: 3.2em;
+            line-height: 0.95;
+            margin: 0.10em 0.18em 0 0;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            background: #e0f7fa;
+            padding: 0.13em 0.21em 0.05em 0.17em;
+            border-radius: 0.4em;
+            box-shadow: 0 1px 5px rgba(23,151,166,0.10);
+        }
+        .thanks-section {
+            margin: 2.5em 0;
+            padding: 1.5em;
+            background: linear-gradient(135deg, #f8fbff, #e0f2f1);
+            border: 1px solid var(--border-color);
+            border-radius: 1em;
+        }
+        .thanks-category {
+            margin: 1.5em 0;
+        }
+        .category-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.1em;
+            color: var(--accent-color);
+            margin-bottom: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .thanks-list {
+            margin: 0.8em 0;
+            line-height: 1.6;
+        }
+        .thanks-item {
+            margin: 0.5em 0;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        .thanks-item:before {
+            content: "❦";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .special-thanks {
+            background: #e0f7fa;
+            border: 2px solid var(--accent-color);
+            border-radius: 1em;
+            padding: 1.5em;
+            margin: 2em 0;
+            text-align: center;
+        }
+        .special-thanks-title {
+            font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+            font-size: 1.3em;
+            color: var(--accent-color);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        .closing-gratitude {
+            text-align: center;
+            font-style: italic;
+            color: var(--secondary-color);
+            margin: 3em 0 2em 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .author-signature {
+            text-align: right;
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-top: 2em;
+            font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .acknowledgments-title {
+                font-size: 1.6em;
+            }
+            .acknowledgments-dropcap {
+                font-size: 2.5em;
+            }
+            .thanks-section {
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="acknowledgments-title">ACKNOWLEDGMENTS</h1>
+    <div class="decorative-line"></div>
+    
+    <p class="acknowledgments-subtitle">
+        {{ acknowledgments_subtitle }}
+    </p>
+
+    <!-- Opening Acknowledgment -->
+    <div class="acknowledgments-content">
+        <p class="first-paragraph">
+            <span class="acknowledgments-dropcap">{{ first_letter }}</span>{{ opening_acknowledgment_paragraph }}
+        </p>
+        
+        <p>{{ general_gratitude_paragraph }}</p>
+    </div>
+
+    <!-- Categorized Thanks Section -->
+    <div class="thanks-section">
+        
+        <!-- Professional Thanks -->
+        <div class="thanks-category">
+            <div class="category-title">{{ professional_category_title }}</div>
+            <div class="thanks-list">
+                <div class="thanks-item">{{ professional_thank_you_1 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_2 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_3 }}</div>
+                <div class="thanks-item">{{ professional_thank_you_4 }}</div>
+            </div>
+        </div>
+
+        <!-- Editorial Team -->
+        <div class="thanks-category">
+            <div class="category-title">{{ editorial_category_title }}</div>
+            <div class="thanks-list">
+                <div class="thanks-item">{{ editor_thank_you }}</div>
+                <div class="thanks-item">{{ designer_thank_you }}</div>
+                <div class="thanks-item">{{ proofreader_thank_you }}</div>
+                <div class="thanks-item">{{ beta_readers_thank_you }}</div>
+            </div>
+        </div>
+
+        <!-- Personal Support -->
+        <div class="thanks-category">
+            <div class="category-title">{{ personal_support_category_title }}</div>
+            <div class="thanks-list">
+                <div class="thanks-item">{{ family_thank_you }}</div>
+                <div class="thanks-item">{{ friends_thank_you }}</div>
+                <div class="thanks-item">{{ personal_supporters_thank_you }}</div>
+            </div>
+        </div>
+
+        <!-- Community & Readers -->
+        <div class="thanks-category">
+            <div class="category-title">{{ community_category_title }}</div>
+            <div class="thanks-list">
+                <div class="thanks-item">{{ community_thank_you }}</div>
+                <div class="thanks-item">{{ social_media_supporters_thank_you }}</div>
+                <div class="thanks-item">{{ early_readers_thank_you }}</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Special Thanks Box -->
+    <div class="special-thanks">
+        <div class="special-thanks-title">Special Recognition</div>
+        <p>{{ special_thanks_content_for_key_person_or_inspiration }}</p>
+    </div>
+
+    <!-- Additional Personal Thanks -->
+    <div class="acknowledgments-content">
+        <p>{{ additional_personal_thanks_paragraph }}</p>
+        
+        <p>{{ inspiration_or_dedication_paragraph }}</p>
+    </div>
+
+    <!-- Closing Gratitude -->
+    <div class="closing-gratitude">
+        "{{ closing_gratitude_quote_or_sentiment }}"
+    </div>
+
+    <!-- Author Signature -->
+    <div class="author-signature">
+        With endless gratitude,<br/>
+        {{ author_name }}<br/>
+        {{ date_or_location }}
+    </div>
+
+</body>
+</html>
