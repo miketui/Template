@@ -110,7 +110,7 @@
     
     <!-- Main book title -->
     <h1 class="main-title">
-        CURLS<span class="title-ampersand">&amp;</span>CONTEMPLATION
+        {{ book_title_html }}
     </h1>
     
     <!-- Subtitle -->
@@ -123,7 +123,7 @@
     
     <!-- Author section -->
     <div class="author-section">
-        <div class="author-label">BY</div>
+        <div class="author-label">{{ by_label }}</div>
         <div class="author-name">{{ author_name }}</div>
     </div>
     
