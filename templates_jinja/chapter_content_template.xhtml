@@ -67,7 +67,11 @@
         Chapter {{ chapter_number }}: {{ abbreviated_chapter_title }}
     </div>
 
+ codex/convert-templates-to-jinja2-with-placeholders
+    <!-- TEMPLATE NOTES: MAIN CHAPTER CONTENT -->
+
     <!-- ========== MAIN CHAPTER CONTENT ========== -->
+main
     
     <!-- First paragraph (continued from introduction or new section) -->
     <p class="first-paragraph">
@@ -121,8 +125,11 @@
     </ul>
     
     <p>{{ content_after_list }}</p>
-    
+codex/convert-templates-to-jinja2-with-placeholders
+    <!-- TEMPLATE NOTES: CHAPTER CONCLUSION -->
+
     <!-- ========== CHAPTER CONCLUSION ========== -->
+ main
     <div class="section-break avoid-break"></div>
     
     <h3>REFLECTION</h3>
@@ -131,7 +138,11 @@
     
     <p>{{ chapter_conclusion_paragraph_2 }}</p>
     
+ codex/convert-templates-to-jinja2-with-placeholders
+    <!-- TEMPLATE NOTES: ENDNOTES SECTION -->
+
     <!-- ========== ENDNOTES SECTION ========== -->
+ main
     <div class="endnotes-section avoid-break">
         <h3>ENDNOTES</h3>
         
@@ -159,7 +170,11 @@
         {{ page_number }}
     </div>
 
+<codex/convert-templates-to-jinja2-with-placeholders
+    <!-- TEMPLATE NOTES: (REMOVE IN FINAL) -->
+
     <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+ main
     <!--
     USAGE INSTRUCTIONS:
     

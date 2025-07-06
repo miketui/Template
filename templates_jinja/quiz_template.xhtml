@@ -96,7 +96,10 @@
 
 <!-- Quiz header -->
 <div class="quiz-page-header">
+codex/convert-templates-to-jinja2-with-placeholders
+
  codex/convert-templates-to-jinja2-with-placeholders
+ main
     {{ quiz_header }}
 </div>
 
@@ -106,6 +109,8 @@
 <!-- Quiz subtitle/instructions -->
 <p class="quiz-subtitle">
     {{ quiz_subtitle }}
+ codex/convert-templates-to-jinja2-with-placeholders
+
 
     Chapter {{ chapter_number }}: {{ abbreviated_chapter_title }} - Knowledge Check
 </div>
@@ -117,15 +122,18 @@
 <p class="quiz-subtitle">
     Test your understanding of the key concepts from this chapter
  main
+ main
 </p>
 
-<!-- Quiz instructions -->
-<div class="quiz-instructions">
+<!-- Quiz instructions --> codex/convert-templates-to-jinja2-with-placeholders
+    {{ quiz_instructions }}
+==
 codex/convert-templates-to-jinja2-with-placeholders
     {{ quiz_instructions }}
 
     <strong>Instructions:</strong> Choose the best answer for each question. 
     Circle or highlight your selected answer.
+ main
  main
 </div>
 
@@ -243,8 +251,11 @@ codex/convert-templates-to-jinja2-with-placeholders
 <div class="page-number">
     {{ page_number }}
 </div>
+ codex/convert-templates-to-jinja2-with-placeholders
+<!-- TEMPLATE NOTES: (REMOVE IN FINAL) -->
 
 <!-- ========== TEMPLATE NOTES (REMOVE IN FINAL) ========== -->
+ main
 <!--
 QUIZ TEMPLATE USAGE:
 
