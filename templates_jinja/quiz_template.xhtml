@@ -96,6 +96,7 @@
 
 <!-- Quiz header -->
 <div class="quiz-page-header">
+ codex/convert-templates-to-jinja2-with-placeholders
     {{ quiz_header }}
 </div>
 
@@ -105,11 +106,27 @@
 <!-- Quiz subtitle/instructions -->
 <p class="quiz-subtitle">
     {{ quiz_subtitle }}
+
+    Chapter {{ chapter_number }}: {{ abbreviated_chapter_title }} - Knowledge Check
+</div>
+
+<!-- Quiz title -->
+<h1 class="quiz-title">Chapter Quiz</h1>
+
+<!-- Quiz subtitle/instructions -->
+<p class="quiz-subtitle">
+    Test your understanding of the key concepts from this chapter
+ main
 </p>
 
 <!-- Quiz instructions -->
 <div class="quiz-instructions">
+codex/convert-templates-to-jinja2-with-placeholders
     {{ quiz_instructions }}
+
+    <strong>Instructions:</strong> Choose the best answer for each question. 
+    Circle or highlight your selected answer.
+ main
 </div>
 
 <!-- Question 1 -->
